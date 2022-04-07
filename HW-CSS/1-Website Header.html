@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>1-Website Header</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--link for icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @media print { body {font-size:10pt;}}
+        @media screen, print {
+            body {
+                line-height: 1.2;
+            }
+        }
+    </style>
+    <style>
+        /* Navbar container */
+        .navbar {
+            overflow: hidden;
+            background-color: darkcyan;
+            font-family: Arial;
+        }
+
+            /* Links inside the navbar */
+            .navbar a {
+                float: left;
+                font-size: 16px;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            .navbar-right {
+                float: right;
+            }
+
+        /* The dropdown container */
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+            /* Dropdown button */
+            .dropdown .dropbtn {
+                font-size: 16px;
+                border: none;
+                outline: none;
+                color: white;
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit; /* Important for vertical align on mobile phones */
+                margin: 0; /* Important for vertical align on mobile phones */
+            }
+
+            /* Add a red background color to navbar links on hover */
+            .navbar a:hover, .dropdown:hover .dropbtn {
+                background-color: darkgrey;
+            }
+
+        /* Dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            /* Links inside the dropdown */
+            .dropdown-content a {
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+                /* Add a grey background color to dropdown links on hover */
+                .dropdown-content a:hover {
+                    background-color: #ddd;
+                }
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* styling search bar */
+        .search input[type=text] {
+            width: 200px;
+            height: 25px;
+            border-radius: 25px;
+            border: none;
+        }
+
+        .search {
+            float: right;
+            margin: 7px;
+        }
+
+            .search button {
+                background-color: #0074D9;
+                color: #f2f2f2;
+                float: right;
+                padding: 5px 10px;
+                margin-right: 16px;
+                font-size: 12px;
+                border: none;
+                cursor: pointer;
+            }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="http://antra.com" target="_blank"><img src="https://d3j0t7vrtr92dk.cloudfront.net/antra/1642697996_AntraLogo.png?" /></a>
+
+        <!--Bell-->
+
+        <a title="Message" class="fa fa-bell-o" style="position:fixed; right:460px">
+            <label class="label label-danger" style="right:0px">0</label>
+        </a>
+
+        <div class="dropdown" style="position:fixed; right:370px">
+            <button class="dropbtn">
+                USER
+                <i class="fa fa-caret-down"></i> <!--arrow icon-->
+            </button>
+            <div class="dropdown-content">
+                <a href="https://en.wikipedia.org/wiki/Elon_Musk/" target="_blank">Elon Musk</a>
+                <a href="https://en.wikipedia.org/wiki/Ang_Lee" target="_blank">Ang Lee</a>
+            </div>
+        </div>
+
+        <!-- search bar right align -->
+        <div class="search">
+            <form action="#">
+                <input type="text"
+                       placeholder="Search"
+                       name="search">
+                <button>
+                    <i class="fa fa-search"
+                       style="font-size: 18px;">
+                    </i>
+                </button>
+            </form>
+        </div>
+        <!--Don't know how to align them-->
+        <br />
+        <br />
+        <br />
+
+        <a href="https://antra.com/" target="_blank">NEWS</a>
+
+        <div class="dropdown">
+            <button class="dropbtn">
+                ABOUT THE UNIVERSITY
+                <i class="fa fa-caret-down"></i> <!--arrow icon-->
+            </button>
+            <div class="dropdown-content">
+                <a href="https://antra.talentlms.com/" target="_blank">LMS</a>
+                <a href="http://harvard.edu/" target="_blank">Havard</a>
+                <a href="https://www.yale.edu/" target="_blank">Yale</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">
+                TRAINING COURSES
+                <i class="fa fa-caret-down"></i> <!--arrow icon-->
+            </button>
+            <div class="dropdown-content">
+                <a href="https://www.w3schools.com/html/default.asp" target="_blank">HTML</a>
+                <a href="https://www.w3schools.com/css/default.asp" target="_blank">CSS</a>
+            </div>
+        </div>
+
+        <a href="https://google.com/" target="_blank">FOR COMPANY</a>
+        <a href="https://antra.com/" target="_blank">FORUM</a>
+        <a href="https://antra.com/contact/" target="_blank">CONTACT</a>
+    </div>
+</body>
+</html>
