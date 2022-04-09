@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">    <!--bootstrap requires html5, html5 requires lang="en"->
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="1-Bootstrap_Register.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <title> Bootstrap Registor</title>
+</head>
+<body>
+    <header>
+        
+    </header>
+
+    <main>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <!--.navbar-brand for your company, product, or project name.-->
+                <a class="navbar-brand" href="#">MovieShopMVC</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!--.navbar-nav for a full-height and lightweight navigation (including support for dropdowns).-->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <!--<li class="nav-item">
+                        <a class="nav-link" href="#">Genres</a>
+                    </li>-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Genres
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Romance</a></li>
+                                <li><a class="dropdown-item" href="#">Comedy</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Else</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link privacy">Privacy</a>
+                        </li>
+                    </ul>
+                    <div class="d-grid gap-2 d-md-block">
+                        <button class="btn btn-primary" type="button">Login</button>
+                        <button class="btn btn-primary" type="submit">Register</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="container-fluid">
+            <section class="row justify-content-center">
+                <!--control the input size, total 12 columns-->
+                <!--pans 6 columns on xs and sm, and 3 columns on md and lg, even though sm and lg were never explicitly declared)-->
+                <section class="col-12 col-sm-6 col-md-3">
+                    <!--just copy from https://getbootstrap.com/docs/5.1/forms/overview/ -->
+                    <form class="form-container" method="get">
+                        <h2>Register</h2>
+                        <h3>UserRequestRegisterModel</h3>
+                        <div class="mb-3">
+                            <label for="InputEmail1" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="InputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="InputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="InputPassword1" class="form-label">ConfirmedPassword</label>
+                            <input type="password" class="form-control" id="InputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="InputFirstName" class="form-label">FirstName</label>
+                            <input type="text" class="form-control" id="InputFirstName" aria-describedby="FirstNameHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="InputLastName" class="form-label">LastName</label>
+                            <input type="text" class="form-control" id="InputLastName" aria-describedby="LastNameHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="InputDateOfBirth" class="form-label">DateOfBirth</label>
+                            <input type="Date" class="form-control" id="InputDateOfBirth" aria-describedby="DoBlHelp">
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-primary">Create</button>
+                        </div>
+                        <a href="url">Back to list</a>
+                    </form>
+                </section>
+            </section>
+        </section>
+
+
+    </main>
+
+    <footer>
+
+    </footer>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+</body>
+</html>
