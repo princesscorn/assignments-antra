@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\princ\\source\\repos\\2022APR\\MovieStoreApp\\MovieStoreApp.WebApp\\MovieStoreApp.WebApp.csproj",
+      "projectUniqueName": "C:\\Users\\princ\\Source\\Repos\\assignments-antra\\2022APR\\MovieStoreApp\\MovieStoreApp.WebApp\\MovieStoreApp.WebApp.csproj",
       "projectName": "MovieStoreApp.WebApp",
-      "projectPath": "C:\\Users\\princ\\source\\repos\\2022APR\\MovieStoreApp\\MovieStoreApp.WebApp\\MovieStoreApp.WebApp.csproj",
+      "projectPath": "C:\\Users\\princ\\Source\\Repos\\assignments-antra\\2022APR\\MovieStoreApp\\MovieStoreApp.WebApp\\MovieStoreApp.WebApp.csproj",
       "packagesPath": "C:\\Users\\princ\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\princ\\source\\repos\\2022APR\\MovieStoreApp\\MovieStoreApp.WebApp\\obj\\",
+      "outputPath": "C:\\Users\\princ\\Source\\Repos\\assignments-antra\\2022APR\\MovieStoreApp\\MovieStoreApp.WebApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,0 +1,21 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model IEnumerable<MovieModel>;
+
+    <h4 class = "display-4">@ViewBag.Title</h4>
+<div class = "row">
+@foreach (var m in Model)
+{
+    <div class = "col-4">
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="@m.PosterUrl" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">@m.Title</h5>
+            <p class="card-text">@m.Description</p>
+            <a href="#" class="btn btn-primary">Show Details</a>
+        </div>
+    </div>
+    </div>
+}
+</div>
