@@ -6,4 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MovieStoreApp.Infrastructure\MovieStoreApp.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

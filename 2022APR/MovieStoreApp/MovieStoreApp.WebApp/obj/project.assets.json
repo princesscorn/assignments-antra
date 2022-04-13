@@ -1,11 +1,48 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "MovieStoreApp.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "MovieStoreApp.Interface": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MovieStoreApp.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MovieStoreApp.Infrastructure.dll": {}
+        }
+      },
+      "MovieStoreApp.Interface/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/MovieStoreApp.Interface.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MovieStoreApp.Interface.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "MovieStoreApp.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../MovieStoreApp.Infrastructure/MovieStoreApp.Infrastructure.csproj",
+      "msbuildProject": "../MovieStoreApp.Infrastructure/MovieStoreApp.Infrastructure.csproj"
+    },
+    "MovieStoreApp.Interface/1.0.0": {
+      "type": "project",
+      "path": "../MovieStoreApp.Interface/MovieStoreApp.Interface.csproj",
+      "msbuildProject": "../MovieStoreApp.Interface/MovieStoreApp.Interface.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "MovieStoreApp.Infrastructure >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\princ\\.nuget\\packages\\": {},
@@ -14,11 +51,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\princ\\Source\\Repos\\assignments-antra\\2022APR\\MovieStoreApp\\MovieStoreApp.WebApp\\MovieStoreApp.WebApp.csproj",
+      "projectUniqueName": "C:\\Users\\princ\\source\\repos\\assignments-antra\\2022APR\\MovieStoreApp\\MovieStoreApp.WebApp\\MovieStoreApp.WebApp.csproj",
       "projectName": "MovieStoreApp.WebApp",
-      "projectPath": "C:\\Users\\princ\\Source\\Repos\\assignments-antra\\2022APR\\MovieStoreApp\\MovieStoreApp.WebApp\\MovieStoreApp.WebApp.csproj",
+      "projectPath": "C:\\Users\\princ\\source\\repos\\assignments-antra\\2022APR\\MovieStoreApp\\MovieStoreApp.WebApp\\MovieStoreApp.WebApp.csproj",
       "packagesPath": "C:\\Users\\princ\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\princ\\Source\\Repos\\assignments-antra\\2022APR\\MovieStoreApp\\MovieStoreApp.WebApp\\obj\\",
+      "outputPath": "C:\\Users\\princ\\source\\repos\\assignments-antra\\2022APR\\MovieStoreApp\\MovieStoreApp.WebApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -38,7 +75,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\princ\\source\\repos\\assignments-antra\\2022APR\\MovieStoreApp\\MovieStoreApp.Infrastructure\\MovieStoreApp.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\princ\\source\\repos\\assignments-antra\\2022APR\\MovieStoreApp\\MovieStoreApp.Infrastructure\\MovieStoreApp.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

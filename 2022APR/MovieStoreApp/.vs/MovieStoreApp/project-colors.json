@@ -5,7 +5,17 @@
       "ProjectGuid": "eb10ea87-c4a6-43a4-85ed-e24325b9658e",
       "DisplayName": "MovieStoreApp.WebApp",
       "ColorIndex": 0
+    },
+    "b17e80b3-d103-41bb-aaf0-0a17fdd4b27f": {
+      "ProjectGuid": "b17e80b3-d103-41bb-aaf0-0a17fdd4b27f",
+      "DisplayName": "MovieStoreApp.Infrastructure",
+      "ColorIndex": 1
+    },
+    "d43c5934-17cc-4ebd-b11a-088da5252d55": {
+      "ProjectGuid": "d43c5934-17cc-4ebd-b11a-088da5252d55",
+      "DisplayName": "MovieStoreApp.Interface",
+      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 3
 }
