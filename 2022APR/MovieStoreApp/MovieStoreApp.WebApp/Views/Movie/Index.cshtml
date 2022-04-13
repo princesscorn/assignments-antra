@@ -3,7 +3,15 @@
 *@
 @model IEnumerable<MovieModel>;
 
-    <h4 class = "display-4">@ViewBag.Title</h4>
+<div class = "row">
+    <div class = "col-9">
+        <h4 class = "display-4">@ViewBag.Title</h4>
+    </div>
+    <div class = "col-3">
+        <a asp-controller = "Movie" asp-action = "Create">Add New Movie</a>
+    </div>
+</div>
+
 <div class = "row">
 @foreach (var m in Model)
 {
@@ -13,7 +21,10 @@
         <div class="card-body">
             <h5 class="card-title">@m.Title</h5>
             <p class="card-text">@m.Description</p>
-            <a href="#" class="btn btn-primary">Show Details</a>
+            <a target = "_blank" asp-controller = "movie" asp-action = "detail" asp-route-movieId = "@m.Id" class="btn btn-primary">Show Details</a>
+            @*
+                this is fine too
+            <a href="/movie/detail/@m.Id" class="btn btn-primary">Show Details</a>*@
         </div>
     </div>
     </div>
