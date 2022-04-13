@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "3397995e-bd96-4197-a45a-038b324b265b": {
+      "ProjectGuid": "3397995e-bd96-4197-a45a-038b324b265b",
+      "DisplayName": "Antra.DapperLearn.Data.Repositories",
+      "ColorIndex": 0
+    },
+    "b4d7e8b9-fc18-4747-9feb-a02983ce341e": {
+      "ProjectGuid": "b4d7e8b9-fc18-4747-9feb-a02983ce341e",
+      "DisplayName": "Antra.DapperLearn.ConsoleApp",
+      "ColorIndex": 1
+    },
+    "08c705c7-d674-4a06-b360-6e3fd61fc25e": {
+      "ProjectGuid": "08c705c7-d674-4a06-b360-6e3fd61fc25e",
+      "DisplayName": "Antra.DapperLearn.Data.Entity",
+      "ColorIndex": 2
+    },
+    "187e6f12-6fda-4160-9270-8f304a172fa3": {
+      "ProjectGuid": "187e6f12-6fda-4160-9270-8f304a172fa3",
+      "DisplayName": "Antra.DapperLearn.Utility",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}

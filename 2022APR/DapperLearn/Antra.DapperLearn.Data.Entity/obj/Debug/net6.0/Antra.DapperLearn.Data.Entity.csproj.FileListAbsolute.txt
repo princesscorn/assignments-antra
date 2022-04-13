@@ -1,0 +1,12 @@
+C:\Users\princ\source\repos\2022APR\DapperLearn\Antra.DapperLearn.Data.Entity\bin\Debug\net6.0\Antra.DapperLearn.Data.Entity.deps.json
+C:\Users\princ\source\repos\2022APR\DapperLearn\Antra.DapperLearn.Data.Entity\bin\Debug\net6.0\Antra.DapperLearn.Data.Entity.dll
+C:\Users\princ\source\repos\2022APR\DapperLearn\Antra.DapperLearn.Data.Entity\bin\Debug\net6.0\ref\Antra.DapperLearn.Data.Entity.dll
+C:\Users\princ\source\repos\2022APR\DapperLearn\Antra.DapperLearn.Data.Entity\bin\Debug\net6.0\Antra.DapperLearn.Data.Entity.pdb
+C:\Users\princ\source\repos\2022APR\DapperLearn\Antra.DapperLearn.Data.Entity\obj\Debug\net6.0\Antra.DapperLearn.Data.Entity.csproj.AssemblyReference.cache
+C:\Users\princ\source\repos\2022APR\DapperLearn\Antra.DapperLearn.Data.Entity\obj\Debug\net6.0\Antra.DapperLearn.Data.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\princ\source\repos\2022APR\DapperLearn\Antra.DapperLearn.Data.Entity\obj\Debug\net6.0\Antra.DapperLearn.Data.Entity.AssemblyInfoInputs.cache
+C:\Users\princ\source\repos\2022APR\DapperLearn\Antra.DapperLearn.Data.Entity\obj\Debug\net6.0\Antra.DapperLearn.Data.Entity.AssemblyInfo.cs
+C:\Users\princ\source\repos\2022APR\DapperLearn\Antra.DapperLearn.Data.Entity\obj\Debug\net6.0\Antra.DapperLearn.Data.Entity.csproj.CoreCompileInputs.cache
+C:\Users\princ\source\repos\2022APR\DapperLearn\Antra.DapperLearn.Data.Entity\obj\Debug\net6.0\Antra.DapperLearn.Data.Entity.dll
+C:\Users\princ\source\repos\2022APR\DapperLearn\Antra.DapperLearn.Data.Entity\obj\Debug\net6.0\ref\Antra.DapperLearn.Data.Entity.dll
+C:\Users\princ\source\repos\2022APR\DapperLearn\Antra.DapperLearn.Data.Entity\obj\Debug\net6.0\Antra.DapperLearn.Data.Entity.pdb

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "eb10ea87-c4a6-43a4-85ed-e24325b9658e": {
+      "ProjectGuid": "eb10ea87-c4a6-43a4-85ed-e24325b9658e",
+      "DisplayName": "MovieStoreApp.WebApp",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

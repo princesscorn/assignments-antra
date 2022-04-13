@@ -1,0 +1,15 @@
+C:\Users\princ\source\repos\2022APR\DapperLearn\Antra.DapperLearn.Data.Repositories\bin\Debug\net6.0\Antra.DapperLearn.Data.Repositories.deps.json
+C:\Users\princ\source\repos\2022APR\DapperLearn\Antra.DapperLearn.Data.Repositories\bin\Debug\net6.0\Antra.DapperLearn.Data.Repositories.dll
+C:\Users\princ\source\repos\2022APR\DapperLearn\Antra.DapperLearn.Data.Repositories\bin\Debug\net6.0\ref\Antra.DapperLearn.Data.Repositories.dll
+C:\Users\princ\source\repos\2022APR\DapperLearn\Antra.DapperLearn.Data.Repositories\bin\Debug\net6.0\Antra.DapperLearn.Data.Repositories.pdb
+C:\Users\princ\source\repos\2022APR\DapperLearn\Antra.DapperLearn.Data.Repositories\obj\Debug\net6.0\Antra.DapperLearn.Data.Repositories.csproj.AssemblyReference.cache
+C:\Users\princ\source\repos\2022APR\DapperLearn\Antra.DapperLearn.Data.Repositories\obj\Debug\net6.0\Antra.DapperLearn.Data.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\princ\source\repos\2022APR\DapperLearn\Antra.DapperLearn.Data.Repositories\obj\Debug\net6.0\Antra.DapperLearn.Data.Repositories.AssemblyInfoInputs.cache
+C:\Users\princ\source\repos\2022APR\DapperLearn\Antra.DapperLearn.Data.Repositories\obj\Debug\net6.0\Antra.DapperLearn.Data.Repositories.AssemblyInfo.cs
+C:\Users\princ\source\repos\2022APR\DapperLearn\Antra.DapperLearn.Data.Repositories\obj\Debug\net6.0\Antra.DapperLearn.Data.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\princ\source\repos\2022APR\DapperLearn\Antra.DapperLearn.Data.Repositories\obj\Debug\net6.0\Antra.DapperLearn.Data.Repositories.dll
+C:\Users\princ\source\repos\2022APR\DapperLearn\Antra.DapperLearn.Data.Repositories\obj\Debug\net6.0\ref\Antra.DapperLearn.Data.Repositories.dll
+C:\Users\princ\source\repos\2022APR\DapperLearn\Antra.DapperLearn.Data.Repositories\obj\Debug\net6.0\Antra.DapperLearn.Data.Repositories.pdb
+C:\Users\princ\source\repos\2022APR\DapperLearn\Antra.DapperLearn.Data.Repositories\bin\Debug\net6.0\Antra.DapperLearn.Data.Entity.dll
+C:\Users\princ\source\repos\2022APR\DapperLearn\Antra.DapperLearn.Data.Repositories\bin\Debug\net6.0\Antra.DapperLearn.Data.Entity.pdb
+C:\Users\princ\source\repos\2022APR\DapperLearn\Antra.DapperLearn.Data.Repositories\obj\Debug\net6.0\Antra.DapperLearn.Data.Repositories.csproj.CopyComplete
