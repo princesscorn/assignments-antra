@@ -1878,8 +1878,8 @@
     },
     "MovieStoreApp.Core/1.0.0": {
       "type": "project",
-      "path": "../MovieStoreApp.Interface/MovieStoreApp.Core.csproj",
-      "msbuildProject": "../MovieStoreApp.Interface/MovieStoreApp.Core.csproj"
+      "path": "../MovieStoreApp.Core/MovieStoreApp.Core.csproj",
+      "msbuildProject": "../MovieStoreApp.Core/MovieStoreApp.Core.csproj"
     },
     "MovieStoreApp.Infrastructure/1.0.0": {
       "type": "project",

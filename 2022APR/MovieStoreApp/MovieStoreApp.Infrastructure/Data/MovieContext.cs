@@ -28,6 +28,6 @@ namespace MovieStoreApp.Infrastructure.Data
         public DbSet<Trailer> Trailer { get; set; }
         public DbSet<User> User { get; set; }
         public DbSet<UserRole> UserRole { get; set; }
-
+       
     }
 }

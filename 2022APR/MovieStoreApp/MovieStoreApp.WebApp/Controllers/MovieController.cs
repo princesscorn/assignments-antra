@@ -14,12 +14,12 @@ namespace MovieStoreApp.WebApp.Controllers
         public IActionResult Index()
         {
             ViewBag.Title = "All Movies";
-            IEnumerable<MovieModel> lstMovies = movieRepository.GetAll();          
+            IEnumerable<MovieModel> lstMovies = movieRepository.GetAll();
             return View(lstMovies);
         }
 
         /*For the Show Details Button*/
-        
+
         public IActionResult Detail(int movieId)
         {
             MovieModel movieModel = movieRepository.GetById(movieId);

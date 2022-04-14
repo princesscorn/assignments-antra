@@ -35,6 +35,10 @@ namespace MovieStoreApp.Core.Entity
 
         [MaxLength(2048)]
         [Column(TypeName = "varchar")]
+        public string TmdbUrl { get; set; }
+
+        [MaxLength(2048)]
+        [Column(TypeName = "varchar")]
         public string PosterUrl { get; set; }
 
         [MaxLength(2048)]
@@ -46,7 +50,8 @@ namespace MovieStoreApp.Core.Entity
         public string OriginalLanguage { get; set; }
         public DateTime ReleaseDate { get; set; }
         public int RunTime { get; set; }
-        public Decimal Price { get; set; }
+        public decimal? Price { get; set; }
+        /*
         public DateTime CreatedDate { get; set; }
         public DateTime UpdatedDate { get; set; }
 
@@ -57,5 +62,6 @@ namespace MovieStoreApp.Core.Entity
         [MaxLength(64)]
         [Column(TypeName = "varchar")]
         public string CreatedBy { get; set; }
+        */
     }
 }
