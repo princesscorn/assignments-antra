@@ -2,41 +2,41 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "MovieStoreApp.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/MovieStoreApp.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MovieStoreApp.Core.dll": {}
+        }
+      },
       "MovieStoreApp.Infrastructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "MovieStoreApp.Interface": "1.0.0"
+          "MovieStoreApp.Core": "1.0.0"
         },
         "compile": {
           "bin/placeholder/MovieStoreApp.Infrastructure.dll": {}
         },
         "runtime": {
           "bin/placeholder/MovieStoreApp.Infrastructure.dll": {}
-        }
-      },
-      "MovieStoreApp.Interface/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "compile": {
-          "bin/placeholder/MovieStoreApp.Interface.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/MovieStoreApp.Interface.dll": {}
         }
       }
     }
   },
   "libraries": {
+    "MovieStoreApp.Core/1.0.0": {
+      "type": "project",
+      "path": "../MovieStoreApp.Interface/MovieStoreApp.Core.csproj",
+      "msbuildProject": "../MovieStoreApp.Interface/MovieStoreApp.Core.csproj"
+    },
     "MovieStoreApp.Infrastructure/1.0.0": {
       "type": "project",
       "path": "../MovieStoreApp.Infrastructure/MovieStoreApp.Infrastructure.csproj",
       "msbuildProject": "../MovieStoreApp.Infrastructure/MovieStoreApp.Infrastructure.csproj"
-    },
-    "MovieStoreApp.Interface/1.0.0": {
-      "type": "project",
-      "path": "../MovieStoreApp.Interface/MovieStoreApp.Interface.csproj",
-      "msbuildProject": "../MovieStoreApp.Interface/MovieStoreApp.Interface.csproj"
     }
   },
   "projectFileDependencyGroups": {

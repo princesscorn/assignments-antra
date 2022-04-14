@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MovieStoreApp.Interface\MovieStoreApp.Interface.csproj" />
+    <ProjectReference Include="..\MovieStoreApp.Interface\MovieStoreApp.Core.csproj" />
   </ItemGroup>
 
 </Project>

@@ -2,28 +2,28 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "MovieStoreApp.Interface/1.0.0": {
+      "MovieStoreApp.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
-          "bin/placeholder/MovieStoreApp.Interface.dll": {}
+          "bin/placeholder/MovieStoreApp.Core.dll": {}
         },
         "runtime": {
-          "bin/placeholder/MovieStoreApp.Interface.dll": {}
+          "bin/placeholder/MovieStoreApp.Core.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "MovieStoreApp.Interface/1.0.0": {
+    "MovieStoreApp.Core/1.0.0": {
       "type": "project",
-      "path": "../MovieStoreApp.Interface/MovieStoreApp.Interface.csproj",
-      "msbuildProject": "../MovieStoreApp.Interface/MovieStoreApp.Interface.csproj"
+      "path": "../MovieStoreApp.Interface/MovieStoreApp.Core.csproj",
+      "msbuildProject": "../MovieStoreApp.Interface/MovieStoreApp.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "MovieStoreApp.Interface >= 1.0.0"
+      "MovieStoreApp.Core >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -58,8 +58,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\princ\\source\\repos\\assignments-antra\\2022APR\\MovieStoreApp\\MovieStoreApp.Interface\\MovieStoreApp.Interface.csproj": {
-              "projectPath": "C:\\Users\\princ\\source\\repos\\assignments-antra\\2022APR\\MovieStoreApp\\MovieStoreApp.Interface\\MovieStoreApp.Interface.csproj"
+            "C:\\Users\\princ\\source\\repos\\assignments-antra\\2022APR\\MovieStoreApp\\MovieStoreApp.Interface\\MovieStoreApp.Core.csproj": {
+              "projectPath": "C:\\Users\\princ\\source\\repos\\assignments-antra\\2022APR\\MovieStoreApp\\MovieStoreApp.Interface\\MovieStoreApp.Core.csproj"
             }
           }
         }

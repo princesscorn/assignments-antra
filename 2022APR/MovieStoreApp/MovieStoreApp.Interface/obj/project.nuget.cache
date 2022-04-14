@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bd3ZzQoMVQz2Un65WqxlH75gPalVP+23Wee/dnlz1c9kj1+3us0oJ9YTCRMBE4xkS3VUrc+exzgyOPTXf9YZiw==",
+  "dgSpecHash": "gW503IL2aBePwHdRqCXYoJJP78/u/IDuOTeBQH70T/k/tun1y41eoY3UTg6OQ2U0zu7NOmQARa2+GdTjkbOg5Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\princ\\source\\repos\\assignments-antra\\2022APR\\MovieStoreApp\\MovieStoreApp.Interface\\MovieStoreApp.Interface.csproj",
+  "projectFilePath": "C:\\Users\\princ\\source\\repos\\assignments-antra\\2022APR\\MovieStoreApp\\MovieStoreApp.Interface\\MovieStoreApp.Core.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
