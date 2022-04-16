@@ -23,7 +23,9 @@ namespace MovieStoreApp.Core.Entity
         public string TmdbUrl { get; set; }
 
         [MaxLength(128)]
-        [Column(TypeName = "nvarchar")]
+        [Column(TypeName = "varchar")]
         public string ProfilePath { get; set; }
+
+        public virtual ICollection<MovieCast> MovieCasts { get; set; }
     }
 }

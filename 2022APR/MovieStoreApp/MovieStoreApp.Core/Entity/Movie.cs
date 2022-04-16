@@ -15,7 +15,6 @@ namespace MovieStoreApp.Core.Entity
 
         [MaxLength(256)]
         [Column(TypeName = "varchar")]
-
         public string Title { get; set; }
 
         [MaxLength(1024)]
@@ -63,5 +62,7 @@ namespace MovieStoreApp.Core.Entity
         [Column(TypeName = "varchar")]
         public string CreatedBy { get; set; }
         */
+
+        public virtual ICollection<MovieCast> MovieCasts { get; set; }
     }
 }

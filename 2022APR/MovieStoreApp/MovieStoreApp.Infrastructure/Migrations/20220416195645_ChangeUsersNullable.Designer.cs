@@ -12,8 +12,8 @@ using MovieStoreApp.Infrastructure.Data;
 namespace MovieStoreApp.Infrastructure.Migrations
 {
     [DbContext(typeof(MovieContext))]
-    [Migration("20220414153529_Initial")]
-    partial class Initial
+    [Migration("20220416195645_ChangeUsersNullable")]
+    partial class ChangeUsersNullable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -43,7 +43,7 @@ namespace MovieStoreApp.Infrastructure.Migrations
                     b.Property<string>("ProfilePath")
                         .IsRequired()
                         .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("varchar(128)");
 
                     b.Property<string>("TmdbUrl")
                         .IsRequired()
@@ -191,11 +191,11 @@ namespace MovieStoreApp.Infrastructure.Migrations
 
             modelBuilder.Entity("MovieStoreApp.Core.Entity.MovieCast", b =>
                 {
-                    b.Property<int>("MovieId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MovieId"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int>("CastId")
                         .HasColumnType("int");
@@ -205,7 +205,14 @@ namespace MovieStoreApp.Infrastructure.Migrations
                         .HasMaxLength(450)
                         .HasColumnType("varchar(450)");
 
-                    b.HasKey("MovieId");
+                    b.Property<int>("MovieId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CastId");
+
+                    b.HasIndex("MovieId");
 
                     b.ToTable("MovieCast");
                 });
@@ -282,11 +289,14 @@ namespace MovieStoreApp.Infrastructure.Migrations
 
             modelBuilder.Entity("MovieStoreApp.Core.Entity.Review", b =>
                 {
-                    b.Property<int>("MovieId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MovieId"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("MovieId")
+                        .HasColumnType("int");
 
                     b.Property<decimal>("Rating")
                         .HasColumnType("decimal(18,2)");
@@ -299,7 +309,7 @@ namespace MovieStoreApp.Infrastructure.Migrations
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
-                    b.HasKey("MovieId");
+                    b.HasKey("Id");
 
                     b.ToTable("Review");
                 });
@@ -348,7 +358,23 @@ namespace MovieStoreApp.Infrastructure.Migrations
                     b.ToTable("Trailer");
                 });
 
-            modelBuilder.Entity("MovieStoreApp.Core.Entity.User", b =>
+            modelBuilder.Entity("MovieStoreApp.Core.Entity.UserRole", b =>
+                {
+                    b.Property<int>("UserId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"), 1L, 1);
+
+                    b.Property<int>("RoleId")
+                        .HasColumnType("int");
+
+                    b.HasKey("UserId");
+
+                    b.ToTable("UserRole");
+                });
+
+            modelBuilder.Entity("MovieStoreApp.Core.Entity.Users", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -356,7 +382,7 @@ namespace MovieStoreApp.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("AccessFailedCount")
+                    b.Property<int?>("AccessFailedCount")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("DateOfBirth")
@@ -377,10 +403,10 @@ namespace MovieStoreApp.Infrastructure.Migrations
                         .HasMaxLength(1024)
                         .HasColumnType("varchar(1024)");
 
-                    b.Property<bool>("IsLocked")
+                    b.Property<bool?>("IsLocked")
                         .HasColumnType("bit");
 
-                    b.Property<DateTime>("LastLoginDateTime")
+                    b.Property<DateTime?>("LastLoginDateTime")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("LastName")
@@ -388,7 +414,7 @@ namespace MovieStoreApp.Infrastructure.Migrations
                         .HasMaxLength(128)
                         .HasColumnType("varchar(128)");
 
-                    b.Property<DateTime>("LockoutEndDate")
+                    b.Property<DateTime?>("LockoutEndDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("PhoneNumber")
@@ -401,28 +427,41 @@ namespace MovieStoreApp.Infrastructure.Migrations
                         .HasMaxLength(1024)
                         .HasColumnType("varchar(1024)");
 
-                    b.Property<bool>("TwoFactorEnabled")
+                    b.Property<bool?>("TwoFactorEnabled")
                         .HasColumnType("bit");
 
                     b.HasKey("Id");
 
-                    b.ToTable("User");
+                    b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("MovieStoreApp.Core.Entity.UserRole", b =>
+            modelBuilder.Entity("MovieStoreApp.Core.Entity.MovieCast", b =>
                 {
-                    b.Property<int>("UserId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                    b.HasOne("MovieStoreApp.Core.Entity.Cast", "Cast")
+                        .WithMany("MovieCasts")
+                        .HasForeignKey("CastId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"), 1L, 1);
+                    b.HasOne("MovieStoreApp.Core.Entity.Movie", "Movie")
+                        .WithMany("MovieCasts")
+                        .HasForeignKey("MovieId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.Property<int>("RoleId")
-                        .HasColumnType("int");
+                    b.Navigation("Cast");
 
-                    b.HasKey("UserId");
+                    b.Navigation("Movie");
+                });
 
-                    b.ToTable("UserRole");
+            modelBuilder.Entity("MovieStoreApp.Core.Entity.Cast", b =>
+                {
+                    b.Navigation("MovieCasts");
+                });
+
+            modelBuilder.Entity("MovieStoreApp.Core.Entity.Movie", b =>
+                {
+                    b.Navigation("MovieCasts");
                 });
 #pragma warning restore 612, 618
         }

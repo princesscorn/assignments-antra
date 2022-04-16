@@ -26,7 +26,7 @@ namespace MovieStoreApp.Infrastructure.Data
         public DbSet<Review> Review { get; set; }
         public DbSet<Role> Role { get; set; }
         public DbSet<Trailer> Trailer { get; set; }
-        public DbSet<User> User { get; set; }
+        public DbSet<Users> Users { get; set; }
         public DbSet<UserRole> UserRole { get; set; }
        
     }

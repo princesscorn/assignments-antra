@@ -18,7 +18,7 @@ namespace MovieStoreApp.Infrastructure.Migrations
                     Name = table.Column<string>(type: "varchar(128)", maxLength: 128, nullable: false),
                     Gender = table.Column<int>(type: "int", nullable: false),
                     TmdbUrl = table.Column<string>(type: "varchar(128)", maxLength: 128, nullable: false),
-                    ProfilePath = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false)
+                    ProfilePath = table.Column<string>(type: "varchar(128)", maxLength: 128, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -94,20 +94,6 @@ namespace MovieStoreApp.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "MovieCast",
-                columns: table => new
-                {
-                    MovieId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    CastId = table.Column<int>(type: "int", nullable: false),
-                    Character = table.Column<string>(type: "varchar(450)", maxLength: 450, nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_MovieCast", x => x.MovieId);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "MovieCrew",
                 columns: table => new
                 {
@@ -156,15 +142,16 @@ namespace MovieStoreApp.Infrastructure.Migrations
                 name: "Review",
                 columns: table => new
                 {
-                    MovieId = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    MovieId = table.Column<int>(type: "int", nullable: false),
                     UserId = table.Column<int>(type: "int", nullable: false),
                     Rating = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     ReviewText = table.Column<string>(type: "varchar(2048)", maxLength: 2048, nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Review", x => x.MovieId);
+                    table.PrimaryKey("PK_Review", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -196,7 +183,20 @@ namespace MovieStoreApp.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "User",
+                name: "UserRole",
+                columns: table => new
+                {
+                    UserId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    RoleId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UserRole", x => x.UserId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Users",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -216,28 +216,49 @@ namespace MovieStoreApp.Infrastructure.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_User", x => x.Id);
+                    table.PrimaryKey("PK_Users", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "UserRole",
+                name: "MovieCast",
                 columns: table => new
                 {
-                    UserId = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    RoleId = table.Column<int>(type: "int", nullable: false)
+                    MovieId = table.Column<int>(type: "int", nullable: false),
+                    CastId = table.Column<int>(type: "int", nullable: false),
+                    Character = table.Column<string>(type: "varchar(450)", maxLength: 450, nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_UserRole", x => x.UserId);
+                    table.PrimaryKey("PK_MovieCast", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_MovieCast_Cast_CastId",
+                        column: x => x.CastId,
+                        principalTable: "Cast",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_MovieCast_Movie_MovieId",
+                        column: x => x.MovieId,
+                        principalTable: "Movie",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_MovieCast_CastId",
+                table: "MovieCast",
+                column: "CastId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_MovieCast_MovieId",
+                table: "MovieCast",
+                column: "MovieId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "Cast");
-
             migrationBuilder.DropTable(
                 name: "Crew");
 
@@ -246,9 +267,6 @@ namespace MovieStoreApp.Infrastructure.Migrations
 
             migrationBuilder.DropTable(
                 name: "Genre");
-
-            migrationBuilder.DropTable(
-                name: "Movie");
 
             migrationBuilder.DropTable(
                 name: "MovieCast");
@@ -272,10 +290,16 @@ namespace MovieStoreApp.Infrastructure.Migrations
                 name: "Trailer");
 
             migrationBuilder.DropTable(
-                name: "User");
+                name: "UserRole");
 
             migrationBuilder.DropTable(
-                name: "UserRole");
+                name: "Users");
+
+            migrationBuilder.DropTable(
+                name: "Cast");
+
+            migrationBuilder.DropTable(
+                name: "Movie");
         }
     }
 }

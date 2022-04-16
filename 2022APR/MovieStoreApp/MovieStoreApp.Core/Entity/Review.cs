@@ -10,8 +10,13 @@ namespace MovieStoreApp.Core.Entity
 {
     public class Review
     {
-        [Key]
+        [Required]
+        public int Id { get; set; }
+        
+        [Required]
         public int MovieId { get; set; }
+
+        [Required]
         public int UserId { get; set; }
         public Decimal Rating { get; set; }
 

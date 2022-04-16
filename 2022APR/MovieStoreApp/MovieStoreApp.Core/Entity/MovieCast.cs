@@ -11,12 +11,19 @@ namespace MovieStoreApp.Core.Entity
 {
     public class MovieCast
     {
-        [Key]
+        [Required]
+        public int Id { get; set; }
+        [Required]
         public int MovieId { get; set; }
+        [Required]
         public int CastId { get; set; }
 
+        [Required]
         [MaxLength(450)]
         [Column(TypeName = "varchar")]
         public string Character { get; set; }
+
+        public virtual Movie Movie { get; set; }  //lazy loading
+        public virtual Cast Cast { get; set; }  //virtual properties help in lazy loading
     }
 }

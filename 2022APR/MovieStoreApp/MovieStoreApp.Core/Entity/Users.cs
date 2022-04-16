@@ -9,7 +9,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MovieStoreApp.Core.Entity
 {
-    public class User
+    public class Users
     {
         public int Id { get; set; }
 
@@ -37,10 +37,10 @@ namespace MovieStoreApp.Core.Entity
         [MaxLength(16)]
         [Column(TypeName = "varchar")]
         public string PhoneNumber { get; set; }
-        public bool TwoFactorEnabled { get; set; }
-        public DateTime LockoutEndDate { get; set; }
-        public DateTime LastLoginDateTime { get; set; }
-        public bool IsLocked { get; set; }
-        public int AccessFailedCount { get; set; }
+        public bool? TwoFactorEnabled { get; set; }
+        public DateTime? LockoutEndDate { get; set; }
+        public DateTime? LastLoginDateTime { get; set; }
+        public bool? IsLocked { get; set; }
+        public int? AccessFailedCount { get; set; }
     }
 }
