@@ -3,8 +3,11 @@
 *@
 @{
 }
-@model MovieModel
+@*
+@model MovieModel *@
+@model MovieResponseModel;
 
+@*
 <div class = "container">
     <div class = "row">
         <div class = "col-8">
@@ -25,6 +28,24 @@
                     <td>@Model.Description</td>
                 </tr>
             </table>
+        </div>
+    </div>
+</div>
+*@
+<div class = "container">
+    <h3 class="display-4">@Model.Title Detail</h3> <hr/>
+    <div class = "row">
+        <div class = "col-4">
+            <img src = "@Model.PosterUrl" class = "img-thumbnail" />
+        </div>
+        <div class = "col-8">
+            <ul class="list-group">
+                <li class="list-group-item">Title - @Model.Title</li>
+                <li class="list-group-item">Tagline - @Model.Tagline</li>
+                <li class="list-group-item">Budget - @Model.Budget</li>
+                <li class="list-group-item">Description - @Model.Overview</li>
+                <li class="list-group-item">Language - @Model.OriginalLanguage | Release On : @Model.ReleaseDate.ToShortDateString() </li>
+            </ul>
         </div>
     </div>
 </div>

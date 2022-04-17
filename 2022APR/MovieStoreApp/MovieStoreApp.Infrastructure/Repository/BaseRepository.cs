@@ -43,14 +43,14 @@ namespace MovieStoreApp.Infrastructure.Repository
         public async Task<int> InsertAsync(T entity)
         {
             await db.Set<T>().AddAsync(entity);
-            await db.SaveChangesAsync();       // commit
+            db.SaveChangesAsync();       // commit, but my program cannot do anything else until the commit finishes
             return 1;
         }
 
         public async Task<int> UpdateAsync(T entity)
         {
             db.Entry<T>(entity).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-            await db.SaveChangesAsync();
+            db.SaveChangesAsync();
             return 1;
         }
     }

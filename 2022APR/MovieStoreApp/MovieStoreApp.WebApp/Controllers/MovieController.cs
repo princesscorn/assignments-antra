@@ -1,29 +1,36 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MovieStoreApp.WebApp.Models;
 using MovieStoreApp.WebApp.Repository;
+using MovieStoreApp.Core.Contract.Service;
+using MovieStoreApp.Core.Models;
 
 namespace MovieStoreApp.WebApp.Controllers
 {
     public class MovieController : Controller
     {
-        MovieRepository movieRepository;
-        public MovieController()
+        IMovieServiceAsync movieServiceAsync;
+        public MovieController(IMovieServiceAsync realMovieServiceAsync)
         {
-            movieRepository = new MovieRepository();
+            movieServiceAsync = realMovieServiceAsync;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             ViewBag.Title = "All Movies";
-            IEnumerable<MovieModel> lstMovies = movieRepository.GetAll();
-            return View(lstMovies);
+            //IEnumerable<MovieModel> lstMovies = movieRepository.GetAll();
+            // Core.Models/MovieResponseModel,
+            // means, here, we call IEnumerable<MovieResponseModel> GetTop10RevenueMovie(), which is implemented in Service
+            var result = await movieServiceAsync.GetTop10RevenueMoviesAsync();
+            //return View(lstMovies);
+            return View(result);
         }
 
         /*For the Show Details Button*/
 
-        public IActionResult Detail(int movieId)
+        public async Task<IActionResult> Detail(int movieId)
         {
-            MovieModel movieModel = movieRepository.GetById(movieId);
-            return View(movieModel);
+            //MovieModel movieModel = movieServiceAsync.GetByIdAsync(movieId);
+            var result = await movieServiceAsync.GetByIdAsync(movieId);
+            return View(result);
         }
 
         public IActionResult Create()

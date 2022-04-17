@@ -3,7 +3,10 @@
 *@
 @{
 }
+@model MovieResponseModel;
+@* This is for for the fake data 4/12/2022, now we use the real data from database
 @model MovieModel;
+
 <div class = "row">
     <form method = "post">
         <div class="mb-3">
@@ -21,6 +24,31 @@
         <div class="mb-3">
             <label asp-for = "PosterUrl"></label>
             <input asp-for = "PosterUrl" class = "form-control" />
+        </div>
+        <div>
+            <input type = "button" value = "Add Movie" class = "btn btn-primary" />
+        </div>
+    </form>
+</div>
+*@
+
+<div class = "row">
+    <form method = "post">
+        <div class="mb-3">
+            <label asp-for = "Title"></label>
+            <input asp-for = "Title" class = "form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for = "PosterUrl"></label>
+            <input asp-for = "PosterUrl" class = "form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for = "Revenue"></label>
+            <textarea asp-for = "Revenue" class = "form-control" ></textarea>
+        </div>
+        <div class="mb-3">
+            <label asp-for = "MovieCasts"></label>
+            <input asp-for = "MovieCasts" class = "form-control" />
         </div>
         <div>
             <input type = "button" value = "Add Movie" class = "btn btn-primary" />
