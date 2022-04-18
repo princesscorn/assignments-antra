@@ -15,7 +15,8 @@ namespace MovieStoreApp.WebApp.Components
         public async Task<IViewComponentResult> InvokeAsync()
         {
             var result = await movieService.GetTop10RevenueMoviesAsync();
-            return View(result);
+            // "Top10RevenueMovies" is the viewName, Views/Shared/Components/LatestMovie/Top10RevenueMovies.cshtml
+            return View("Top10RevenueMovies", result);
         }
      }
 }
