@@ -18,9 +18,11 @@ builder.Services.AddDbContext<MovieContext>(option =>
 
 // for repository
 builder.Services.AddScoped<IMovieRepositoryAsync, MovieRepositoryAsync>();
+builder.Services.AddScoped<IMovieCastRepositoryAsync, MovieCastRepositoryAsync>();
 
 // for services
 builder.Services.AddScoped<IMovieServiceAsync, MovieServiceAsync>();
+builder.Services.AddScoped<IMovieCastServiceAsync, MovieCastServiceAsync>();
 #endregion
 
 

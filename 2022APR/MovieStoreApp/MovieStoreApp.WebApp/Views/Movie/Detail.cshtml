@@ -46,6 +46,22 @@
                 <li class="list-group-item">Description - @Model.Overview</li>
                 <li class="list-group-item">Language - @Model.OriginalLanguage | Release On : @Model.ReleaseDate.ToShortDateString() </li>
             </ul>
+            <div class = "row">
+                @foreach (var mCast in @Model.MovieCasts)
+                {
+                    <div class = "col-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="@mCast.Cast.ProfilePath" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">@mCast.Cast.Name</h5>
+                                <p class="card-text">@mCast.Cast.Gender</p>
+                                @*<a target = "_blank" asp-controller = "movie" asp-action = "detail" asp-route-movieId = "@m.Id" class="btn btn-primary">Show Details</a>*@
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                }
+            </div>
         </div>
     </div>
 </div>

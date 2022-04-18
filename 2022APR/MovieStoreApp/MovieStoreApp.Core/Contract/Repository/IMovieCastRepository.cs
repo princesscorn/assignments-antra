@@ -7,7 +7,8 @@ using MovieStoreApp.Core.Entity;
 
 namespace MovieStoreApp.Core.Contract.Repository
 {
-    public interface IMovieCastAsync : IRepositoryAsync <MovieCast>
+    public interface IMovieCastRepositoryAsync
     {
+        Task<IEnumerable<MovieCast>> GetAllByMovieIdAsync(int movieId);
     }
 }

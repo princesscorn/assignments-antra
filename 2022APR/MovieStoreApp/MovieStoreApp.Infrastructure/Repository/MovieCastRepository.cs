@@ -3,16 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using MovieStoreApp.Core.Contract.Repository;
 using MovieStoreApp.Core.Entity;
 using MovieStoreApp.Infrastructure.Data;
 
 namespace MovieStoreApp.Infrastructure.Repository
 {
-    public class MovieCastRepositoryAsync : BaseRepositoryAsync <MovieCast>
+    public class MovieCastRepositoryAsync : BaseRepositoryAsync<MovieCast>, IMovieCastRepositoryAsync
     {
+        MovieContext context;
         public MovieCastRepositoryAsync(MovieContext _db) : base (_db)
         {
-
+            context = _db;
+        }
+        public async Task<IEnumerable<MovieCast>> GetAllByMovieIdAsync(int movieId)
+        {
+            return await context.MovieCast.Include("Cast").Where(x => x.MovieId == movieId).ToListAsync();
         }
     }
 }
+

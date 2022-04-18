@@ -63,6 +63,6 @@ namespace MovieStoreApp.Core.Models
         public string CreatedBy { get; set; }
         */
 
-        public virtual ICollection<MovieCast> MovieCasts { get; set; }
+        public virtual IEnumerable<MovieCastModel> MovieCasts { get; set; }
     }
 }
