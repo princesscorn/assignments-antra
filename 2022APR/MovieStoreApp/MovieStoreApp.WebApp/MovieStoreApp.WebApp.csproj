@@ -19,4 +19,8 @@
     <ProjectReference Include="..\MovieStoreApp.Infrastructure\MovieStoreApp.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Shared\Components\LatestMovie\" />
+  </ItemGroup>
+
 </Project>

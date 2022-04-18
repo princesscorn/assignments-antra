@@ -14,19 +14,6 @@
     </div>
 </div>
 
+@await Component.InvokeAsync("TopMovie");
 
-<div class = "row">
-@foreach (var m in Model)
-{
-    <div class = "col-4">
-    <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="@m.PosterUrl" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">@m.Title</h5>
-            <p class="card-text">@m.Overview</p>
-            <a target = "_blank" asp-controller = "movie" asp-action = "detail" asp-route-movieId = "@m.Id" class="btn btn-primary">Show Details</a>
-        </div>
-    </div>
-    </div>
-}
-</div>
+
