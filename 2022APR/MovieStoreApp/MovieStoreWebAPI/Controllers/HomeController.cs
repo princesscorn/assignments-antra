@@ -27,7 +27,7 @@ namespace MovieStoreWebAPI.Controllers
         [Route("{Name}")]
         public string GetInputName(string name)
         {
-            return "Hi, name"
+            return "Hi, name";
         }
     }
 }

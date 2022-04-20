@@ -1,3 +1,10 @@
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieStoreApp\MovieStoreWebAPI\obj\Debug\net6.0\MovieStoreWebAPI.csproj.AssemblyReference.cache
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieStoreApp\MovieStoreWebAPI\obj\Debug\net6.0\MovieStoreWebAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieStoreApp\MovieStoreWebAPI\obj\Debug\net6.0\MovieStoreWebAPI.AssemblyInfoInputs.cache
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieStoreApp\MovieStoreWebAPI\obj\Debug\net6.0\MovieStoreWebAPI.AssemblyInfo.cs
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieStoreApp\MovieStoreWebAPI\obj\Debug\net6.0\MovieStoreWebAPI.csproj.CoreCompileInputs.cache
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieStoreApp\MovieStoreWebAPI\obj\Debug\net6.0\MovieStoreWebAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieStoreApp\MovieStoreWebAPI\obj\Debug\net6.0\MovieStoreWebAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\princ\source\repos\assignments-antra\2022APR\MovieStoreApp\MovieStoreWebAPI\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\princ\source\repos\assignments-antra\2022APR\MovieStoreApp\MovieStoreWebAPI\bin\Debug\net6.0\appsettings.json
 C:\Users\princ\source\repos\assignments-antra\2022APR\MovieStoreApp\MovieStoreWebAPI\bin\Debug\net6.0\MovieStoreWebAPI.exe
@@ -48,13 +55,6 @@ C:\Users\princ\source\repos\assignments-antra\2022APR\MovieStoreApp\MovieStoreWe
 C:\Users\princ\source\repos\assignments-antra\2022APR\MovieStoreApp\MovieStoreWebAPI\bin\Debug\net6.0\MovieStoreApp.Infrastructure.dll
 C:\Users\princ\source\repos\assignments-antra\2022APR\MovieStoreApp\MovieStoreWebAPI\bin\Debug\net6.0\MovieStoreApp.Infrastructure.pdb
 C:\Users\princ\source\repos\assignments-antra\2022APR\MovieStoreApp\MovieStoreWebAPI\bin\Debug\net6.0\MovieStoreApp.Core.pdb
-C:\Users\princ\source\repos\assignments-antra\2022APR\MovieStoreApp\MovieStoreWebAPI\obj\Debug\net6.0\MovieStoreWebAPI.csproj.AssemblyReference.cache
-C:\Users\princ\source\repos\assignments-antra\2022APR\MovieStoreApp\MovieStoreWebAPI\obj\Debug\net6.0\MovieStoreWebAPI.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\princ\source\repos\assignments-antra\2022APR\MovieStoreApp\MovieStoreWebAPI\obj\Debug\net6.0\MovieStoreWebAPI.AssemblyInfoInputs.cache
-C:\Users\princ\source\repos\assignments-antra\2022APR\MovieStoreApp\MovieStoreWebAPI\obj\Debug\net6.0\MovieStoreWebAPI.AssemblyInfo.cs
-C:\Users\princ\source\repos\assignments-antra\2022APR\MovieStoreApp\MovieStoreWebAPI\obj\Debug\net6.0\MovieStoreWebAPI.csproj.CoreCompileInputs.cache
-C:\Users\princ\source\repos\assignments-antra\2022APR\MovieStoreApp\MovieStoreWebAPI\obj\Debug\net6.0\MovieStoreWebAPI.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\princ\source\repos\assignments-antra\2022APR\MovieStoreApp\MovieStoreWebAPI\obj\Debug\net6.0\MovieStoreWebAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\princ\source\repos\assignments-antra\2022APR\MovieStoreApp\MovieStoreWebAPI\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\princ\source\repos\assignments-antra\2022APR\MovieStoreApp\MovieStoreWebAPI\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\princ\source\repos\assignments-antra\2022APR\MovieStoreApp\MovieStoreWebAPI\obj\Debug\net6.0\scopedcss\bundle\MovieStoreWebAPI.styles.css

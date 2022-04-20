@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MovieStoreApp.Core.Contract.Repository;
 using MovieStoreApp.Core.Entity;
 using MovieStoreApp.Infrastructure.Data;
 
 namespace MovieStoreApp.Infrastructure.Repository
 {
-    internal class GenreRepositoryAsync : BaseRepositoryAsync<Genre>
+    public class GenreRepositoryAsync : BaseRepositoryAsync<Genre>, IGenreRepositoryAsync
     {
         public GenreRepositoryAsync(MovieContext _db) : base(_db)
         {

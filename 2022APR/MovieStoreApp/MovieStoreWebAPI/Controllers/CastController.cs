@@ -44,9 +44,23 @@ namespace MovieStoreWebAPI.Controllers
         [HttpPost]
         [Route("add")]
         //this function cannot work until comment the last property of CastModel in Core/Models/CastModels.cs
-        public async Task<> AddCast([FromBody] CastModel castModel)
+        public async Task<IActionResult> AddCast([FromBody] CastModel castModel)
         {
             return Ok(await _castServiceAsycnc.AddCastAsync(castModel));
+        }
+
+        [HttpDelete]
+        [Route("delete")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            return Ok(await _castServiceAsycnc.DeleteCastAsync(id));
+        }
+
+        [HttpPut]
+        [Route("update")]
+        public async Task<IActionResult> Update([FromBody] CastModel castModel)
+        {
+            return Ok(await _castServiceAsycnc.UpdateCastAsync(castModel));
         }
     }
 }

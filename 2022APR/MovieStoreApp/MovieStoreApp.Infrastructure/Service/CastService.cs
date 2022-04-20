@@ -66,5 +66,20 @@ namespace MovieStoreApp.Infrastructure.Service
             }
             return null;
         }
+
+        public async Task<int> DeleteCastAsync(int id)
+        {
+            return await castRepositoryAsync.DeleteAsync(id);
+        }
+
+        public async Task<int> UpdateCastAsync(CastModel model)
+        {
+            Cast c = new Cast();
+            c.Name = model.Name;
+            c.TmdbUrl = model.TmdbUrl;
+            c.ProfilePath = model.ProfilePath;
+            c.Gender = model.Gender;
+            return await castRepositoryAsync.UpdateAsync(c);
+        }
     }
 }
