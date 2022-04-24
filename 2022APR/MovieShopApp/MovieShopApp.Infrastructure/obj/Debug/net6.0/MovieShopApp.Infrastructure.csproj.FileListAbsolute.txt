@@ -1,0 +1,15 @@
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieShopApp\MovieShopApp.Infrastructure\bin\Debug\net6.0\MovieShopApp.Infrastructure.deps.json
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieShopApp\MovieShopApp.Infrastructure\bin\Debug\net6.0\MovieShopApp.Infrastructure.dll
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieShopApp\MovieShopApp.Infrastructure\bin\Debug\net6.0\ref\MovieShopApp.Infrastructure.dll
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieShopApp\MovieShopApp.Infrastructure\bin\Debug\net6.0\MovieShopApp.Infrastructure.pdb
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieShopApp\MovieShopApp.Infrastructure\bin\Debug\net6.0\MovieShopApp.Core.dll
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieShopApp\MovieShopApp.Infrastructure\bin\Debug\net6.0\MovieShopApp.Core.pdb
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieShopApp\MovieShopApp.Infrastructure\obj\Debug\net6.0\MovieShopApp.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieShopApp\MovieShopApp.Infrastructure\obj\Debug\net6.0\MovieShopApp.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieShopApp\MovieShopApp.Infrastructure\obj\Debug\net6.0\MovieShopApp.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieShopApp\MovieShopApp.Infrastructure\obj\Debug\net6.0\MovieShopApp.Infrastructure.AssemblyInfo.cs
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieShopApp\MovieShopApp.Infrastructure\obj\Debug\net6.0\MovieShopApp.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieShopApp\MovieShopApp.Infrastructure\obj\Debug\net6.0\MovieShopApp.Infrastructure.csproj.CopyComplete
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieShopApp\MovieShopApp.Infrastructure\obj\Debug\net6.0\MovieShopApp.Infrastructure.dll
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieShopApp\MovieShopApp.Infrastructure\obj\Debug\net6.0\ref\MovieShopApp.Infrastructure.dll
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieShopApp\MovieShopApp.Infrastructure\obj\Debug\net6.0\MovieShopApp.Infrastructure.pdb

@@ -1,0 +1,24 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model MovieResponseModel;
+
+@*
+    col-2 means one card uses 2 columns, totally 12 columns by default
+    mb-2: margin bottom 0.5 rem.
+*@
+<div class = "col-2 mb-2">
+    <div class="card" style="width: 10rem;">
+        <img class="card-img-top" src="@Model.PosterUrl" alt="Card image cap">
+        <div class="card-body">
+            @* The Title length is different, so the cards show different height, 
+                Add the title has been shown in each poster, so no another title been shown here
+            *@
+            @*<h5 class="card-title">@Model.Title</h5>*@
+            <p class="card-text">@Model.Overview</p>
+            <a target = "_blank" asp-controller = "movie" asp-action = "detail" asp-route-movieId = "@Model.Id" class="btn btn-primary">Show Details</a>
+        </div>
+    </div>
+</div>

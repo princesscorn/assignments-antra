@@ -1,0 +1,53 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model MovieResponseModel;
+
+<div class = "container">
+    <div class = "row" style="background: black">
+        <div class = "col-4">
+            <img src = "@Model.PosterUrl" class = "img-thumbnail" style="left" />
+        </div>
+        <div class = "col-8">
+            <ul class="list-group">
+                <li class="list-group-item">Title - @Model.Title</li>
+                <li class="list-group-item">Tagline - @Model.Tagline</li>
+                <li class="list-group-item">Genre - @Model.GenresOfMovie</li>
+                <li class="list-group-item">Budget - @Model.Budget</li>
+                <li class="list-group-item">Description - @Model.Overview</li>
+                <li class="list-group-item">Language - @Model.OriginalLanguage | Release On : @Model.ReleaseDate.ToShortDateString() </li>
+            </ul>
+            <div class = "row">
+                @foreach (var mCast in @Model.MovieCasts)
+                {
+                    var gen = "Female";
+                    if ( mCast.Cast.Gender == 2)
+                    {
+                        gen = "Male";
+                    }
+                    <div class = "col-3 mb-4">
+                        <div class="card" style="width: 10rem;">
+                            <img class="card-img-top" src="@mCast.Cast.ProfilePath" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">@mCast.Cast.Name</h5>
+                                @*<p class="card-text">@mCast.Cast.Gender</p>*@
+                                <p class="card-text">@gen</p>
+                                @*<a target = "_blank" asp-controller = "movie" asp-action = "detail" asp-route-movieId = "@m.Id" class="btn btn-primary">Show Details</a>*@
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                }
+            </div>
+        </div>
+        @*<div class = "row">
+            <div class = "col-6 mb-4">
+                <partial name="_MovieCard" model="@Model" />
+            </div>
+        </div>*@
+    </div>
+</div>
+© 2022 G

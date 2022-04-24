@@ -1,0 +1,11 @@
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieShopApp\MovieShopApp.Core\bin\Debug\net6.0\MovieShopApp.Core.deps.json
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieShopApp\MovieShopApp.Core\bin\Debug\net6.0\MovieShopApp.Core.dll
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieShopApp\MovieShopApp.Core\bin\Debug\net6.0\ref\MovieShopApp.Core.dll
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieShopApp\MovieShopApp.Core\bin\Debug\net6.0\MovieShopApp.Core.pdb
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieShopApp\MovieShopApp.Core\obj\Debug\net6.0\MovieShopApp.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieShopApp\MovieShopApp.Core\obj\Debug\net6.0\MovieShopApp.Core.AssemblyInfoInputs.cache
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieShopApp\MovieShopApp.Core\obj\Debug\net6.0\MovieShopApp.Core.AssemblyInfo.cs
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieShopApp\MovieShopApp.Core\obj\Debug\net6.0\MovieShopApp.Core.csproj.CoreCompileInputs.cache
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieShopApp\MovieShopApp.Core\obj\Debug\net6.0\MovieShopApp.Core.dll
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieShopApp\MovieShopApp.Core\obj\Debug\net6.0\ref\MovieShopApp.Core.dll
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieShopApp\MovieShopApp.Core\obj\Debug\net6.0\MovieShopApp.Core.pdb
