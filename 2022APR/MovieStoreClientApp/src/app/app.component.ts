@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MovieStoreClientApp';
+  showTitle=true;
+  studentName="Catherine"
+
+  logMessage()
+  {
+    console.log("button is clicked. ");
+    console.log(this.studentName);
+  }
+
 }
+
