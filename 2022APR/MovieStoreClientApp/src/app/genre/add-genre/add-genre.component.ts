@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-add-genre',
@@ -9,7 +10,13 @@ export class AddGenreComponent implements OnInit {
 
   constructor() { }
 
+  genreName:string="";
   ngOnInit(): void {
   }
 
+  saveGenre(genreForm: NgForm) {
+    console.log(genreForm);
+    console.log(genreForm.value);
+    //console.log(genreForm.value.genreName);
+  }
 }

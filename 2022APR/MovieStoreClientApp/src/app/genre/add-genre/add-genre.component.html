@@ -1,1 +1,4 @@
-<p>add-genre works!</p>
+<form #genreForm="ngForm" (submit) = "saveGenre(genreForm)">
+    <input type="text" [(ngModel)]="genreName" name="genreName" required="true" />
+    <input type="submit" value="Add Genre" class="btn btn-primary" [disabled]="!genreForm.valid" />
+</form>

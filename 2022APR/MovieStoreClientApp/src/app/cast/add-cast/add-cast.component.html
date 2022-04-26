@@ -1,1 +1,20 @@
-<p>add-cast works!</p>
+<form #castForm="ngForm" (submit) = "addCast(castForm)">
+    <div class="mb-3">
+        <label>Name</label>
+        <input (ngModel)="castModelValue.name" name="name" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label>Gender</label>
+        <input (ngModel)="castModelValue.gender" name="gender" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label>tmdbUrl</label>
+        <input (ngModel)="castModelValue.tmdbUrl" name="tmdbUrl" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label>profilePath</label>
+        <input (ngModel)="castModelValue.profilePath" name="profilePath" class="form-control">
+    </div>
+        <input type="submit" class="btn btn-primary" value="Add Cast">
+        <input type="button" class="btn btn-default" value="Reset" (click)="resetForm(castForm)">
+</form>
