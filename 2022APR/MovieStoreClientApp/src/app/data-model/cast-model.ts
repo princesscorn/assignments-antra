@@ -3,5 +3,6 @@ export interface CastModel {
     name: string;
     gender: number;
     tmdbUrl: string;
-    profilePath: string
+    profilePath: string,
+    MovieCasts:any
 }

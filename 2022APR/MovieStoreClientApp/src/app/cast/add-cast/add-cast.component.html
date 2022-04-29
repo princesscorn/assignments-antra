@@ -15,6 +15,10 @@
         <label>profilePath</label>
         <input (ngModel)="castModelValue.profilePath" name="profilePath" class="form-control">
     </div>
+    <div class="mb-3">
+        <label>MovieCasts</label>
+        <input (ngModel)="castModelValue.MovieCasts" name="MovieCasts" class="form-control">
+    </div>
         <input type="submit" class="btn btn-primary" value="Add Cast">
         <input type="button" class="btn btn-default" value="Reset" (click)="resetForm(castForm)">
 </form>

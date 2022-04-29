@@ -18,7 +18,8 @@ export class AddCastComponent implements OnInit {
     name:'',
     gender:1,
     tmdbUrl:'',
-    profilePath:''
+    profilePath:'',
+    MovieCasts:[]
   };
 
   ngOnInit(): void {

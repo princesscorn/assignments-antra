@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CastModel } from 'src/app/data-model/cast-model';
+import { CastService } from '../cast.service';
 
 @Component({
   selector: 'app-list-cast',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListCastComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  casts:CastModel[] = [];
+  constructor(private castService:CastService) { 
+    this.ShowCastsList();
   }
+
+  ShowCastsList()
+  {
+    this.castService.getCast().subscribe((res) => {this.casts = res;});
+  }
+
+  ngOnInit(): void {  } 
 
 }

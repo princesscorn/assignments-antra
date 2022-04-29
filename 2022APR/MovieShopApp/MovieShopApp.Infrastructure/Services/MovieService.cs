@@ -72,18 +72,20 @@ namespace MovieShopApp.Infrastructure.Services
             }
             
             //model.GenresOfMovie = result.GenresOfMovie.ToList();
-            /* if (item.GenresOfMovie != null) 
+            if (movie.GenresOfMovie != null) 
             { 
                 List< MovieGenreModel> genreList = new List<MovieGenreModel>();
-                foreach (var g in item.GenresOfMovie)
+                foreach (var g in movie.GenresOfMovie)
                 {
                     MovieGenreModel movieGenreModel = new MovieGenreModel();
                     {
-                        movieGenreModel.Genre = g.Genre;
+                        movieGenreModel.Genre.Id = g.Genre.Id;
+                        movieGenreModel.Genre.Name = g.Genre.Name;
                     }
+                    genreList.Add(movieGenreModel);
                 }
-                genreList.Add(movieGenreModel);
-            }*/
+                
+            }
             responseModel.GenresOfMovie = movie.GenresOfMovie;
             return responseModel;
         }

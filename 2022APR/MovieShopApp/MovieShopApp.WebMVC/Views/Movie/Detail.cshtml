@@ -15,7 +15,15 @@
             <ul class="list-group">
                 <li class="list-group-item">Title - @Model.Title</li>
                 <li class="list-group-item">Tagline - @Model.Tagline</li>
-                <li class="list-group-item">Genre - @Model.GenresOfMovie</li>
+                <li class="list-group-item">Genre - 
+                    @*if ((@Model.GenresOfMovie) != null)
+                    {
+                        @foreach (var mGenre in @Model.GenresOfMovie)
+                        {    
+                            @mGenre.Genre.Name
+                        }
+                    }*@
+                </li>
                 <li class="list-group-item">Budget - @Model.Budget</li>
                 <li class="list-group-item">Description - @Model.Overview</li>
                 <li class="list-group-item">Language - @Model.OriginalLanguage | Release On : @Model.ReleaseDate.ToShortDateString() </li>
@@ -50,4 +58,3 @@
         </div>*@
     </div>
 </div>
-© 2022 G
