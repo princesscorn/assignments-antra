@@ -1,12 +1,14 @@
 <a href="genre/add">Add New Genre</a>
-<table>
-    <thead>        
-        <th>Id</th>
-        <th>Name</th>
+<table class="table table-stripped table-hover">
+    <thead>     
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
     </thead>
     <tbody>
         <tr *ngFor = "let g of genres">
-            <td>{{g.id}}&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>{{g.id}}</td>
             <td>{{g.name}}</td>
         </tr>
     </tbody>
