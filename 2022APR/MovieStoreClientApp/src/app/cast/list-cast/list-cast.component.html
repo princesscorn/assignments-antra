@@ -4,12 +4,16 @@
         <th>Id</th>
         <th>Name</th>
         <th>Gender</th>
+        <th>Action</th>
     </thead>
     <tbody>
         <tr *ngFor="let c of casts">
             <td>{{c.id}}</td>
             <td>{{c.name}}</td>
             <td>{{c.gender}}</td>
+            <td>
+                <input type="button" value="Delete" class="btn btn-danger" (click)="DeleteCastById(c.id)" />
+            </td>
         </tr>
     </tbody>
 </table>

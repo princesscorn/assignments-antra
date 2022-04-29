@@ -50,7 +50,7 @@ namespace MovieStoreWebAPI.Controllers
         }
 
         [HttpDelete]
-        [Route("delete")]
+        [Route("remove/{id}")]
         public async Task<IActionResult> Delete(int id)
         {
             return Ok(await _castServiceAsycnc.DeleteCastAsync(id));

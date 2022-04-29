@@ -14,11 +14,19 @@ export class ListCastComponent implements OnInit {
     this.ShowCastsList();
   }
 
+  ngOnInit(): void {  } 
+
   ShowCastsList()
   {
     this.castService.getCast().subscribe((res) => {this.casts = res;});
   }
 
-  ngOnInit(): void {  } 
+  DeleteCastById(id:number)
+  {
+    this.castService.deleteCast(id).subscribe((res) => {
+      alert("Cast has been deleted!")
+      this.ShowCastsList();
+    });
+  }
 
 }

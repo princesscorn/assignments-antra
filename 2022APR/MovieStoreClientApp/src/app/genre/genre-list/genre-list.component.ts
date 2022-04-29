@@ -21,7 +21,14 @@ export class GenreListComponent implements OnInit {
     this.gService.GetAllGenres().subscribe( (res)=> {this.genres = res;})
   }
 
-  ngOnInit(): void { }
+  DeleteGenreById(id:number)
+  {
+    this.gService.DeleteGenre(id).subscribe((res) => {
+      alert("Genre has been deleted!")
+      this.ShowGenresList();
+    });
+  }
 
+  ngOnInit(): void { }
   
 }

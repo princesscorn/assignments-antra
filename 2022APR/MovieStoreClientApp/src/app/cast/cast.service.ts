@@ -10,7 +10,7 @@ export class CastService {
 
   constructor(private Http:HttpClient) { }
 
-  addCast(castModel:CastModel){
+  addCast(castModel:CastModel) {
     //return this.Http.post<any>("http://localhost:50091", castModel).pipe(map((res:any)=> {return res;}));
     //return this.Http.post<any>("http://localhost:59724", castModel).pipe(map((res:any)=> {return res;}));
     //return this.Http.post<any>("http://localhost:4200", castModel).pipe(map((res:any)=> {return res;}));
@@ -21,5 +21,9 @@ export class CastService {
 
   getCast() {
     return this.Http.get<CastModel[]>("https://localhost:44390/api/Cast");
+  }
+
+  deleteCast(id:number) {
+    return this.Http.delete("https://localhost:44390/api/Cast/remove/" + id);
   }
 }

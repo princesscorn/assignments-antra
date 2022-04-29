@@ -1,4 +1,19 @@
-<form #genreForm="ngForm" (submit) = "saveGenre(genreForm)">
-    <input type="text" [(ngModel)]="genreName" name="genreName" required="true" />
+
+<!--
+<form #genreForm="ngForm" (submit) = "addGenre(genreForm)">
+    <input type="text" [(ngModel)]="genreModelValue.name" name="genreName" required="true" />
     <input type="submit" value="Add Genre" class="btn btn-primary" [disabled]="!genreForm.valid" />
+</form>
+-->
+
+<form #genreForm="ngForm" (submit) = "addGenre(genreForm)">
+    <div class="mb-3">
+        <label>Id</label>
+        <input (ngModel)="genreModelValue.id" name="id" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label>Name</label>
+        <input (ngModel)="genreModelValue.name" name="name" class="form-control">
+    </div>
+        <input type="submit" class="btn btn-primary" value="Add Genre">
 </form>
