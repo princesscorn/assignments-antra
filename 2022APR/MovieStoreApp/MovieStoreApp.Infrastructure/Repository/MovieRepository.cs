@@ -26,5 +26,6 @@ namespace MovieStoreApp.Infrastructure.Repository
         {
             return await context.Movie.OrderByDescending(x => x.ReleaseDate).Take(3).ToListAsync();
         }
+
     }
 }

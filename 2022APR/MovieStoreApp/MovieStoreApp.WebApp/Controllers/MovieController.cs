@@ -24,9 +24,14 @@ namespace MovieStoreApp.WebApp.Controllers
             //IEnumerable<MovieModel> lstMovies = movieRepository.GetAll();
             // Core.Models/MovieResponseModel,
             // means, here, we call IEnumerable<MovieResponseModel> GetTop10RevenueMovie(), which is implemented in Service
+            /*
             var result = await mServiceAsync.GetTop10RevenueMoviesAsync();
             //return View(lstMovies);
             return View(result);
+            */
+
+            var lstMovies = await mServiceAsync.GetAllMoviesAsync();
+            return View(lstMovies);
         }
 
         /*For the Show Details Button*/

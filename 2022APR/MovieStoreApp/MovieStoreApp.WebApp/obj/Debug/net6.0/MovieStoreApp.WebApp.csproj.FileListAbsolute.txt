@@ -89,3 +89,9 @@ C:\Users\princ\source\repos\assignments-antra\2022APR\MovieStoreApp\MovieStoreAp
 C:\Users\princ\source\repos\assignments-antra\2022APR\MovieStoreApp\MovieStoreApp.WebApp\obj\Debug\net6.0\ref\MovieStoreApp.WebApp.dll
 C:\Users\princ\source\repos\assignments-antra\2022APR\MovieStoreApp\MovieStoreApp.WebApp\obj\Debug\net6.0\MovieStoreApp.WebApp.pdb
 C:\Users\princ\source\repos\assignments-antra\2022APR\MovieStoreApp\MovieStoreApp.WebApp\obj\Debug\net6.0\MovieStoreApp.WebApp.genruntimeconfig.cache
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieStoreApp\MovieStoreApp.WebApp\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieStoreApp\MovieStoreApp.WebApp\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieStoreApp\MovieStoreApp.WebApp\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieStoreApp\MovieStoreApp.WebApp\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieStoreApp\MovieStoreApp.WebApp\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieStoreApp\MovieStoreApp.WebApp\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll

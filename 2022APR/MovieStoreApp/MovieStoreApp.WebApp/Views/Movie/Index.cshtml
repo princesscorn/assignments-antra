@@ -13,12 +13,22 @@
         <a asp-controller = "Movie" asp-action = "Create">Add New Movie</a>
     </div>
 </div>
-<h2>Top 10 Revenue Moives</h2>
+
+
+@* <h2>Top 10 Revenue Moives</h2> *@
 @*"TopMovie" is the componentName, Views/Shared/Components/TopMovie/*@
-@await Component.InvokeAsync("TopMovie");   //"TopMovie" must match the component name
+@* @await Component.InvokeAsync("TopMovie");   //"TopMovie" must match the component name
 <hr />
 @*"LatestMovie" is the componentName, Views/Shared/Components/LatestMovie/*@
-<h2>Latest 3 Movies</h2>
+
+@*<h2>Latest 3 Movies</h2>
 @await Component.InvokeAsync("LatestMovie");
+*@
+
+
+<h2>All Moives</h2>
+@*"AllMovies" is the componentName, Views/Shared/Components/AllMovies/*@
+@await Component.InvokeAsync("AllMovies");   //"AllMovies" must match the component name
+<hr />
 
 

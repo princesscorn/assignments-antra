@@ -11,7 +11,7 @@ namespace MovieStoreApp.Core.Models
         public int CurrentPageNo { get; set; }
         public int PageSize { get; set; }
         public int TotalPages { get; set; }
-        public long Count { get; set; }
+        //public long Count { get; set; }
         public bool HasPreviousPage => CurrentPageNo > 1;
         public bool HasNextPage => CurrentPageNo < TotalPages;
         
@@ -26,10 +26,10 @@ namespace MovieStoreApp.Core.Models
 
         }
 
-        public PageModel(int totalItems, int page, int pageSize = 30)
+        public PageModel(int totalItems, int curPage, int pageSize = 30)
         {
             int totalPages = (int)Math.Ceiling((decimal)totalItems / (decimal)pageSize);
-            int currentPage = page;
+            int currentPage = curPage;
             int startPage = currentPage - 5;
             int endPage = currentPage + 4;
 

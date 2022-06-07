@@ -13,6 +13,6 @@ namespace MovieStoreApp.Core.Contract.Service
         Task<MovieResponseModel> GetByIdAsync(int id);
         Task<IEnumerable<MovieResponseModel>> GetTop3LatestMoviesAsync();
 
-
+        Task<IEnumerable<MovieResponseModel>> GetAllMoviesAsync();
     }
 }

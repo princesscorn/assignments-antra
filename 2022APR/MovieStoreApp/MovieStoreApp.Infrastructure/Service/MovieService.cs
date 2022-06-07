@@ -88,5 +88,30 @@ namespace MovieStoreApp.Infrastructure.Service
             }
             return listMovieResponse;
         }
+
+        public async Task<IEnumerable<MovieResponseModel>> GetAllMoviesAsync()
+        {
+            var result = await movieRepositoryAsync.GetAllAsync();
+            List<MovieResponseModel> listMovieResponse = new List<MovieResponseModel>();
+            foreach (var movie in result)
+            {
+                MovieResponseModel responseModel = new MovieResponseModel();
+                responseModel.Id = movie.Id;
+                responseModel.Overview = movie.Overview;
+                responseModel.ImdbUrl = movie.ImdbUrl;
+                responseModel.OriginalLanguage = movie.OriginalLanguage;
+                responseModel.Tagline = movie.Tagline;
+                responseModel.PosterUrl = movie.PosterUrl;
+                responseModel.Price = movie.Price;
+                responseModel.ReleaseDate = movie.ReleaseDate;
+                responseModel.Revenue = movie.Revenue;
+                responseModel.RunTime = movie.RunTime;
+                responseModel.TmdbUrl = movie.TmdbUrl;
+                responseModel.Title = movie.Title;
+                responseModel.Budget = movie.Budget;
+                listMovieResponse.Add(responseModel);
+            }
+            return listMovieResponse;
+        }
     }
 }

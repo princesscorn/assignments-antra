@@ -1,14 +1,15 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MovieStoreApp.Core.Entity;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace MovieStoreApp.Infrastructure.Data
 {
-    public class MovieContext : DbContext
+    public class MovieContext : IdentityDbContext<MovieUser>
     {
         public MovieContext(DbContextOptions<MovieContext> option) : base(option)
         {
@@ -28,6 +29,7 @@ namespace MovieStoreApp.Infrastructure.Data
         public DbSet<Trailer> Trailer { get; set; }
         public DbSet<Users> Users { get; set; }
         public DbSet<UserRole> UserRole { get; set; }
-       
+        public DbSet<MovieUser> MovieUser { get; set; }
+
     }
 }
