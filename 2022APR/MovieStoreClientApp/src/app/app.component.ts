@@ -9,6 +9,9 @@ export class AppComponent {
   title = 'MovieStoreClientApp';
   showTitle=true;
   studentName="Catherine"
+  employees = ["Daniel", "Roger", "Olivia", "Rhea"]
+  
+  stateAcc="TX"
 
   logMessage()
   {

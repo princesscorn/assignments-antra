@@ -9,7 +9,19 @@
 
 <input [ngModel]="studentName" />
 <input type="button" value="click me" (click)="logMessage()"/>
+
+<ul>
+  <li *ngFor="let e of employees">{{e}}</li>
+</ul>
+
+<div [ngSwitch="stateAcc">
+  <div *ngSwitchCase="'IL'">ILLINIOS</div>
+  <div *ngSwitchCase="'VA'">VIRGINIA</div>
+  <div *ngSwitchCase="'TX'">TEXAS</div>
+  <div *ngSwitchDefault="">Provide Some Value</div>
+</div>
 -->
+
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
@@ -21,6 +33,9 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="movie/list">Movie</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="genre/list">Genre</a>

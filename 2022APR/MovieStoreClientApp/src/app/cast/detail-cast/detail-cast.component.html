@@ -1,1 +1,13 @@
-<p>detail-cast works!</p>
+<div class = "row">
+    <div class="col-4" >
+        <img [src]="castModel.profilePath" alt="Cast image cap" class="img-thumbnail" >       
+    </div>
+    <span class="col-8">
+        <p>Id: {{castModel.id}}</p>
+        <p>Name: {{castModel.name}}</p>
+        <p>Gender: {{castModel.gender}}</p>
+        <p>TmdbUrl: {{castModel.tmdbUrl}}</p>
+        <p>MovieCasts: {{castModel.MovieCasts}}</p>
+    </span>
+</div>
+

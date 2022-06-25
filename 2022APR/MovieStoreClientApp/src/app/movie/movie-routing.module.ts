@@ -14,7 +14,7 @@ const routes: Routes = [
         component:AddMovieComponent
     },
     {
-        path:"detail",
+        path:"detail/:id",
         component:DetailMovieComponent
     }
 ];

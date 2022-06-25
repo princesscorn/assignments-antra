@@ -16,6 +16,7 @@ const routes: Routes = [
   },
   {
     path:'movie',
+    canActivate:[AdminRouteGuard],    // true by default
     loadChildren: () => import('./movie/movie.module').then( m => m.MovieModule)
   }, 
   {

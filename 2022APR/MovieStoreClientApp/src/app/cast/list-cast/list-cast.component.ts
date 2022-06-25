@@ -5,7 +5,8 @@ import { CastService } from '../cast.service';
 @Component({
   selector: 'app-list-cast',
   templateUrl: './list-cast.component.html',
-  styleUrls: ['./list-cast.component.css']
+  styleUrls: ['./list-cast.component.css'],
+  providers: [CastService]
 })
 export class ListCastComponent implements OnInit {
 
@@ -18,6 +19,7 @@ export class ListCastComponent implements OnInit {
 
   ShowCastsList()
   {
+    alert("Show All Casts!")
     this.castService.getCast().subscribe((res) => {this.casts = res;});
   }
 

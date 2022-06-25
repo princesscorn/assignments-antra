@@ -1,10 +1,37 @@
-<div class="col-3 mb-5">
+<!--<div class="col-3 mb-5">
     <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="movieModel.posterUrl" class="img-thumbnail" alt="...">
         <div class="card-body">
           <h5 class="card-title">Movie Id = {{movieId}}</h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
+</div>
+-->
+
+<div class="row">
+  <div class="col-4" >
+    <img [src]="movieModel.posterUrl" alt="Movie image cap" class="img-thumbnail" >       
+  </div>
+  <span class="col-8">
+    <p>Id: {{movieModel.id}}</p>
+    <p>Title: {{movieModel.title}}</p>
+    <p>OverView: {{movieModel.overview}}</p>
+    <p>TagLine: {{movieModel.tagline}}</p>
+    <p>ImdbUrl: {{movieModel.imdbUrl}}</p>
+    <p>Budget: {{movieModel.budget}}</p>
+    <p>Revenue: {{movieModel.revenue}}</p>
+    <p>ImdbUrl: {{movieModel.imdbUrl}}</p>
+    <p>TmdbUrl: {{movieModel.tmdbUrl}}</p>
+    <p>BackdropUrl: {{movieModel.backdropUrl}}</p>
+    <p>OriginalLanguage: {{movieModel.originalLanguage}}</p>
+    <p>ReleaseDate: {{movieModel.releaseDate}}</p>
+    <p>RunTime: {{movieModel.runTime}}</p>
+    <p>Price: {{movieModel.price}}</p>
+    <p>CreatedDate: {{movieModel.createdDate}}</p>
+    <p>UpdatedDate: {{movieModel.updatedDate}}</p>
+    <p>UpdatedBy: {{movieModel.updatedBy}}</p>
+    <p>CreatedBy: {{movieModel.createdBy}}</p>
+  </span>
 </div>

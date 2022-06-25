@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CastModule } from './cast/cast.module';
 import { GenreModule } from './genre/genre.module';
+import { MovieModule } from './movie/movie.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
@@ -20,6 +21,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     FormsModule,
     CastModule,
     GenreModule,
+    MovieModule,
     HttpClientModule
   ],
   providers: [],

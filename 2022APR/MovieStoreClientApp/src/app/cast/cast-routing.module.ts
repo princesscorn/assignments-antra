@@ -14,7 +14,7 @@ const routes: Routes = [
         component:AddCastComponent
     },
     {
-        path:"detail",
+        path:"detail/:id",
         component:DetailCastComponent
     }
 ];
