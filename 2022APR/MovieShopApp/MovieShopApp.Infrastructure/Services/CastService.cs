@@ -1,5 +1,6 @@
 ﻿using MovieShopApp.Core.Contracts.Repositories;
 using MovieShopApp.Core.Contracts.Services;
+using MovieShopApp.Core.Entities;
 using MovieShopApp.Core.Models;
 using System;
 using System.Collections.Generic;
@@ -54,6 +55,31 @@ namespace MovieShopApp.Infrastructure.Services
                 return model;
             }
             return null;
+        }
+
+        public async Task<int> AddCastAsync(CastModel model)
+        {
+            Cast c = new Cast();
+            c.Name = model.Name;
+            c.TmdbUrl = model.TmdbUrl;
+            c.ProfilePath = model.ProfilePath;
+            c.Gender = model.Gender;
+            return await _castRepositoryAsync.InsertAsync(c);
+        }
+
+        public async Task<int> DeleteCastAsync(int id)
+        {
+            return await _castRepositoryAsync.DeleteAsync(id);
+        }
+
+        public async Task<int> UpdateCastAsync(CastModel model)
+        {
+            Cast c = new Cast();
+            c.Name = model.Name;
+            c.TmdbUrl = model.TmdbUrl;
+            c.ProfilePath = model.ProfilePath;
+            c.Gender = model.Gender;
+            return await _castRepositoryAsync.UpdateAsync(c);
         }
     }
 }

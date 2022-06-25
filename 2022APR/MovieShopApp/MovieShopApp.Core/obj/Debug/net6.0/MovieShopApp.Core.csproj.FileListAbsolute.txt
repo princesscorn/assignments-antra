@@ -9,3 +9,4 @@ C:\Users\princ\source\repos\assignments-antra\2022APR\MovieShopApp\MovieShopApp.
 C:\Users\princ\source\repos\assignments-antra\2022APR\MovieShopApp\MovieShopApp.Core\obj\Debug\net6.0\MovieShopApp.Core.dll
 C:\Users\princ\source\repos\assignments-antra\2022APR\MovieShopApp\MovieShopApp.Core\obj\Debug\net6.0\ref\MovieShopApp.Core.dll
 C:\Users\princ\source\repos\assignments-antra\2022APR\MovieShopApp\MovieShopApp.Core\obj\Debug\net6.0\MovieShopApp.Core.pdb
+C:\Users\princ\source\repos\assignments-antra\2022APR\MovieShopApp\MovieShopApp.Core\obj\Debug\net6.0\MovieShopApp.Core.csproj.AssemblyReference.cache

@@ -12,5 +12,9 @@ namespace MovieShopApp.Core.Contracts.Services
         //Task<IEnumerable<CastModel>> GetCastsByMovieIdAsync(int id);
         Task<IEnumerable<CastModel>> GetAllCastsAsync();
         Task<CastModel> GetCastByCastIdAsync(int id);
+
+        Task<int> AddCastAsync(CastModel model);
+        Task<int> DeleteCastAsync(int id);
+        Task<int> UpdateCastAsync(CastModel model);
     }
 }

@@ -10,8 +10,10 @@ namespace MovieShopApp.Core.Contracts.Services
     public interface IGenreServiceAsync
     {
         Task<IEnumerable<GenreModel>> GetAllGenresAsync();
-        Task<int> InsertGenreAsync(GenreModel model);
-        Task<int> DeleteGenreAsync(int id);
+        Task<GenreModel> GetGenreByGenreIdAsync(int id);
+        Task<int> AddGenreAsync(GenreModel model);
+        //Task<int> InsertGenreAsync(GenreModel model);
+        Task<int> DeleteGenreByIdAsync(int id);
         Task<int> UpdateGenreAsync(GenreModel model);
     }
 }

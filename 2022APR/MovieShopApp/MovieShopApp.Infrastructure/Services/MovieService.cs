@@ -72,7 +72,7 @@ namespace MovieShopApp.Infrastructure.Services
             }
             
             //model.GenresOfMovie = result.GenresOfMovie.ToList();
-            if (movie.GenresOfMovie != null) 
+            if ((movie != null) && (movie.GenresOfMovie != null) )
             { 
                 List< MovieGenreModel> genreList = new List<MovieGenreModel>();
                 foreach (var g in movie.GenresOfMovie)
@@ -84,9 +84,9 @@ namespace MovieShopApp.Infrastructure.Services
                     }
                     genreList.Add(movieGenreModel);
                 }
-                
+                responseModel.GenresOfMovie = movie.GenresOfMovie;
             }
-            responseModel.GenresOfMovie = movie.GenresOfMovie;
+            
             return responseModel;
         }
 
