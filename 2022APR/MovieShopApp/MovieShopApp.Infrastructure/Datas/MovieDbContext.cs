@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using MovieShopApp.Core.Entities;
 
 namespace MovieShopApp.Infrastructure.Datas
 {
-    public class MovieDbContext : DbContext
+    public class MovieDbContext : IdentityDbContext<MovieUser>
     {
         public MovieDbContext(DbContextOptions<MovieDbContext> option) : base(option)
         {
@@ -39,7 +40,9 @@ namespace MovieShopApp.Infrastructure.Datas
         public DbSet<Review> Review { get; set; }
         public DbSet<Role> Role { get; set; }
         public DbSet<Trailer> Trailer { get; set; }
-        public DbSet<Users> Users { get; set; }
-        public DbSet<UserRole> UserRole { get; set; }
+        public DbSet<Users> Users { get; set; }     // No use, can be deleted
+        public DbSet<UserRole> UserRole { get; set; }   // No use, can be deleted
+        public DbSet<MovieUser> MovieUser { get; set; }
+
     }
 }

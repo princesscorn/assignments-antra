@@ -1,5 +1,7 @@
+using Microsoft.AspNetCore.Identity;
 using MovieShopApp.Core.Contracts.Repositories;
 using MovieShopApp.Core.Contracts.Services;
+using MovieShopApp.Core.Entities;
 using MovieShopApp.Infrastructure.Datas;
 using MovieShopApp.Infrastructure.Repositories;
 using MovieShopApp.Infrastructure.Services;
@@ -29,19 +31,25 @@ builder.Services.AddCors(option =>
 // Add context of MovieShop which configured in appsettings.json
 builder.Services.AddSqlServer<MovieDbContext>(builder.Configuration.GetConnectionString("MovieShop"));
 
+// Add Service of MovieUser's Identity
+// Add Identity, we don't need special Role class, just use the system default IdentityRole to create role table
+// If we don't need FirstName and LastName, we can just use the system default IdentityUser
+builder.Services.AddIdentity<MovieUser, IdentityRole>().AddEntityFrameworkStores<MovieDbContext>().AddDefaultTokenProviders();
+
+
 
 // Add Repository of MovieShop
 builder.Services.AddScoped<IMovieRepositoryAsync, MovieRepositoryAsync>();
 builder.Services.AddScoped<ICastRepositoryAsync, CastRepositoryAsync>();
 builder.Services.AddScoped<IMovieCastRepositoryAsync, MovieCastRepositoryAsync>();
+builder.Services.AddScoped<IAccountRepositoryAsync, AccountRepositoryAsync>();
+
 
 // Add Service of MovieShop
 builder.Services.AddScoped<IMovieServiceAsync, MovieServiceAsync>();
 builder.Services.AddScoped<ICastServiceAsync, CastServiceAsync>();
 builder.Services.AddScoped<IMovieCastServiceAync, MovieCastServiceAsync>();
-
-
-
+builder.Services.AddScoped<IAccountServiceAsync, AccountServiceAsync>();
 
 
 
@@ -60,6 +68,8 @@ app.UseCors();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseAuthentication();        // MovieShop Authentication
 
 app.MapControllers();
 
