@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MovieShopApp.Core.Contracts.Services;
 using MovieShopApp.Core.Models;
@@ -7,6 +8,7 @@ namespace MovieShopApp.WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class CastController : ControllerBase
     {
         private readonly ICastServiceAsync _castServiceAsycnc;

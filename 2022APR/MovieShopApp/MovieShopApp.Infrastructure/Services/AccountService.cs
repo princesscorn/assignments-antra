@@ -22,5 +22,10 @@ namespace MovieShopApp.Infrastructure.Services
         {
             return await _accountRepositoryAsync.SignUpAsync(model);
         }
+
+        public async Task<SignInResult> Login(LoginModel loginModel)
+        {
+            return await _accountRepositoryAsync.Login(loginModel);
+        }
     }
 }

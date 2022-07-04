@@ -11,5 +11,6 @@ namespace MovieShopApp.Core.Contracts.Services
     public interface IAccountServiceAsync
     {
         Task<IdentityResult> SignUpAsync(MovieUserModel model);
+        Task<SignInResult> Login(LoginModel model);
     }
 }

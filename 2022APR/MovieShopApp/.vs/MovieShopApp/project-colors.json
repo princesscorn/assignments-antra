@@ -15,7 +15,17 @@
       "ProjectGuid": "94a33954-aaed-4be4-a61f-c3d1b85e544a",
       "DisplayName": "MovieShopApp.Core",
       "ColorIndex": 2
+    },
+    "41381173-58e6-4994-a4ec-b12d312bbde1": {
+      "ProjectGuid": "41381173-58e6-4994-a4ec-b12d312bbde1",
+      "DisplayName": "MovieShopApp.WebAPI",
+      "ColorIndex": 3
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
     }
   },
-  "NextColorIndex": 3
+  "NextColorIndex": 4
 }

@@ -13,9 +13,11 @@ namespace MovieShopApp.Infrastructure.Repositories
     public class AccountRepositoryAsync : IAccountRepositoryAsync
     {
         private readonly UserManager<MovieUser> _userManager;
-        public AccountRepositoryAsync(UserManager<MovieUser> userManager)
+        private readonly SignInManager<MovieUser> _signInManager;
+        public AccountRepositoryAsync(UserManager<MovieUser> userManager, SignInManager<MovieUser> signInManager)
         {
             _userManager = userManager;
+            _signInManager = signInManager;
         }
         public async Task<IdentityResult> SignUpAsync(MovieUserModel model)
         {
@@ -26,6 +28,12 @@ namespace MovieShopApp.Infrastructure.Repositories
             movieUser.UserName = model.EmailId.ToString();      // Use EmailId as userName
 
             return await _userManager.CreateAsync(movieUser, model.Password);
+        }
+
+        public async Task<SignInResult> Login(LoginModel loginModel)
+        {
+            var result = await _signInManager.PasswordSignInAsync(loginModel.UserName, loginModel.Password, false, false);
+            return result;
         }
     }
 }

@@ -1,10 +1,13 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.IdentityModel.Tokens;
 using MovieShopApp.Core.Contracts.Repositories;
 using MovieShopApp.Core.Contracts.Services;
 using MovieShopApp.Core.Entities;
 using MovieShopApp.Infrastructure.Datas;
 using MovieShopApp.Infrastructure.Repositories;
 using MovieShopApp.Infrastructure.Services;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -37,10 +40,32 @@ builder.Services.AddSqlServer<MovieDbContext>(builder.Configuration.GetConnectio
 builder.Services.AddIdentity<MovieUser, IdentityRole>().AddEntityFrameworkStores<MovieDbContext>().AddDefaultTokenProviders();
 
 
+// Add Authentication of MovieUsers
+builder.Services.AddAuthentication(option =>
+{
+    option.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    option.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    option.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(option =>
+{
+    option.SaveToken = true;
+    option.RequireHttpsMetadata = false;
+    option.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidIssuer = builder.Configuration["JWT:ValidIssuer"],
+        ValidAudience = builder.Configuration["JWT:ValidAudience"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:SecurityKey"]))
+    };
+    });
+
+
 
 // Add Repository of MovieShop
 builder.Services.AddScoped<IMovieRepositoryAsync, MovieRepositoryAsync>();
 builder.Services.AddScoped<ICastRepositoryAsync, CastRepositoryAsync>();
+builder.Services.AddScoped<IGenreRepositoryAsync, GenreRepositoryAsync>();
 builder.Services.AddScoped<IMovieCastRepositoryAsync, MovieCastRepositoryAsync>();
 builder.Services.AddScoped<IAccountRepositoryAsync, AccountRepositoryAsync>();
 
@@ -48,6 +73,7 @@ builder.Services.AddScoped<IAccountRepositoryAsync, AccountRepositoryAsync>();
 // Add Service of MovieShop
 builder.Services.AddScoped<IMovieServiceAsync, MovieServiceAsync>();
 builder.Services.AddScoped<ICastServiceAsync, CastServiceAsync>();
+builder.Services.AddScoped<IGenreServiceAsync, GenreServiceAsync>();
 builder.Services.AddScoped<IMovieCastServiceAync, MovieCastServiceAsync>();
 builder.Services.AddScoped<IAccountServiceAsync, AccountServiceAsync>();
 
@@ -67,9 +93,11 @@ app.UseCors();
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();        // MovieShop Authentication, must before Authorization
+
 app.UseAuthorization();
 
-app.UseAuthentication();        // MovieShop Authentication
+
 
 app.MapControllers();
 
