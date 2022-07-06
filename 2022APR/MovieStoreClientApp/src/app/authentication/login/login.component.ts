@@ -32,11 +32,9 @@ export class LoginComponent implements OnInit {
         response=> {console.log(response.jwt);
                     localStorage.clear();
                     localStorage.setItem('token', response.jwt);
-                    //this.router.navigateByUrl('home');
-                   }, 
-        
+                    this.router.navigateByUrl('home');
+                   },         
         err=> {console.log(err);} );
-    //console.log("Exit userLogin");
   }
 
 }

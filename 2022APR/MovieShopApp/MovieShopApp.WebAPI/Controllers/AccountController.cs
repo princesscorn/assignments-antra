@@ -56,7 +56,8 @@ namespace MovieShopApp.WebAPI.Controllers
                     signingCredentials: new SigningCredentials(secuirtyKey, SecurityAlgorithms.HmacSha256Signature)
                     );
                 var tokenWrites = new JwtSecurityTokenHandler().WriteToken(token);
-                return Ok(tokenWrites);
+                //return Ok(tokenWrites);
+                return Ok(new {Jwt = tokenWrites});
             }
             return Unauthorized();
         }
