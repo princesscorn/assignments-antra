@@ -5,7 +5,8 @@ import { ListCastComponent } from './list-cast/list-cast.component';
 import { DetailCastComponent } from './detail-cast/detail-cast.component';
 import { CastRoutingModule } from './cast-routing.module';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+// {HttpClientModule} only can be imported once in whole project, we import it in app.module.ts
+//import { HttpClientModule } from '@angular/common/http'; 
 
 
 
@@ -19,7 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     CastRoutingModule,
     FormsModule,
-    HttpClientModule
+    //HttpClientModule
   ]
 })
 export class CastModule { }

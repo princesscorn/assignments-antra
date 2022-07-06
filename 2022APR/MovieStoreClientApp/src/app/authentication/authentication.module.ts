@@ -1,24 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { GenreListComponent } from './genre-list/genre-list.component';
-import { AddGenreComponent } from './add-genre/add-genre.component';
-import { GenreRoutingModule } from './genre-routing.module';
+import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 // {HttpClientModule} only can be imported once in whole project, we import it in app.module.ts
 //import { HttpClientModule } from '@angular/common/http';
+import { AuthenticationService } from './authentication.service';
 
 
 
 @NgModule({
   declarations: [
-    GenreListComponent,
-    AddGenreComponent
+    LoginComponent
   ],
   imports: [
     CommonModule,
-    GenreRoutingModule,
     FormsModule,
     //HttpClientModule
-  ]
+  ],
+  providers:[AuthenticationService]
 })
-export class GenreModule { }
+export class AuthenticationModule { }

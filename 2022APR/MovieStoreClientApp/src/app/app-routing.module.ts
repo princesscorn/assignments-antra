@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './authentication/login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AdminRouteGuard } from './route-guards/admin-route.guard';
 
 const routes: Routes = [
-
+  
   {
     path:'genre',
     canActivate:[AdminRouteGuard],    // true by default
@@ -12,6 +13,7 @@ const routes: Routes = [
   },
   {
     path:'cast',
+    canActivate:[AdminRouteGuard],    // true by default
     loadChildren: () => import ('./cast/cast.module').then( m => m.CastModule)
   },
   {
@@ -21,8 +23,11 @@ const routes: Routes = [
   }, 
   {
     path:'',
-    redirectTo: 'movie/list',
-    pathMatch:'full'
+    component:LoginComponent
+  },
+  {
+    path:'login',
+    component:LoginComponent
   },
   {
     path:'home',

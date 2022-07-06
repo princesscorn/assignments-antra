@@ -5,7 +5,8 @@ import { AddMovieComponent } from './add-movie/add-movie.component';
 import { DetailMovieComponent } from './detail-movie/detail-movie.component';
 import { MovieRoutingModule } from './movie-routing.module';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+// {HttpClientModule} only can be imported once in whole project, we import it in app.module.ts
+//import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -19,7 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     MovieRoutingModule,
     FormsModule,
-    HttpClientModule
+    //HttpClientModule,
   ]
 })
 export class MovieModule { }

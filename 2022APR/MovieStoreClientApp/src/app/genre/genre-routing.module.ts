@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddGenreComponent } from './add-genre/add-genre.component';
 import { GenreListComponent } from './genre-list/genre-list.component';
+import { LoginComponent } from '../authentication/login/login.component';
 
 const routes: Routes = [
     {
@@ -11,6 +12,10 @@ const routes: Routes = [
     {
         path:"add",
         component:AddGenreComponent
+    },
+    {
+        path:"",
+        component:LoginComponent
     }
 ];
 

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddMovieComponent } from './add-movie/add-movie.component';
 import { DetailMovieComponent } from './detail-movie/detail-movie.component';
 import { ListMovieComponent } from './list-movie/list-movie.component';
+import { LoginComponent } from '../authentication/login/login.component';
 
 const routes: Routes = [
     {
@@ -16,6 +17,10 @@ const routes: Routes = [
     {
         path:"detail/:id",
         component:DetailMovieComponent
+    },
+    {
+        path:"",
+        component:LoginComponent
     }
 ];
 
