@@ -31,8 +31,9 @@ const routes: Routes = [
   },
   {
     path:'home',
-    redirectTo: 'movie/list',
-    pathMatch:'full'
+    component:LoginComponent
+    //redirectTo: 'movie/list',
+    //pathMatch:'full'
   },
   {
     path:'Index',

@@ -17,7 +17,6 @@ export class AdminRouteGuard implements CanActivate {
         //let tmp = localStorage["token"];
         if (tmp)
         {
-          console.log(tmp);
           console.log("In AdminRouteGuard " + true);
           return true;
         }
